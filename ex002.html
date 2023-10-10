@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>표와리스트예제</title>
+
+    <style>
+        li a{color: red;}
+        li li {font-weight: bold;}
+        ul>li>a {background-color: aqua;}
+        li>ol>li>a {background-color: yellow;}
+        
+        .title{background-color: antiquewhite;}
+        .s {font-weight: 600;}
+
+    </style>
 </head>
 <body>
     <h1>표와 리스트 예제</h1>
@@ -12,14 +23,14 @@
     <h2>리스트예제001</h2>
 
     <ul>
-        <li><b>과일</b>
+        <li><a href=""><b>과일</b></a>
             <ol>
-                <li>딸기</li>
-                <li>사과</li>
-                <li>포도</li>
+                <li><a href="">딸기</a></li>
+                <li><a href="">사과</a></li>
+                <li><a href="">포도</a></li>
             </ol>
         </li>
-        <li><b>채소</b>
+        <li><a href=""><b>채소</b></a>
             <ol>
                 <li>상추</li>
                 <li>배추</li>
@@ -85,12 +96,14 @@
     </ul>
 
     <h2>표예제001</h2>
+
+
     <!-- 정답파일 -->
     <table border="1">
         <tr>
-            <td colspan="3">공연요금</td>
+            <td colspan="3" class="title">공연요금</td>
         </tr>
-        <tr>
+        <tr class="s">
             <td>구분</td>
             <td>R석</td>
             <td>S석</td>
@@ -120,15 +133,15 @@
     <h2>표예제002</h2>
     <table border="1">
         <tr>
-            <td colspan="6">한국의차</td>
+            <td colspan="6" class="title">한국의차</td>
             
         </tr>
         <tr>
-            <td rowspan="6">뿌리차</td>
+            <td rowspan="6" class="s">뿌리차</td>
             <td>인삼차</td>
-            <td rowspan="9">과일차</td>
+            <td rowspan="9" class="s">과일차</td>
             <td>수정과</td>
-            <td rowspan="5">잎차</td>
+            <td rowspan="5" class="s">잎차</td>
             <td>뽕잎차</td>
         </tr>
         <tr>
@@ -168,11 +181,11 @@
             <td>마차</td>
             
             <td>매실차</td>
-            <td rowspan="4">기타</td>
+            <td rowspan="4" class="s">기타</td>
             <td>두충차</td>
         </tr>
         <tr>
-            <td rowspan="3">곡물차</td>
+            <td rowspan="3" class="s">곡물차</td>
             <td>보리차</td>
             
             <td>모과차</td>
