@@ -523,7 +523,7 @@ header .gnb ul li a:hover {
   max-width: 300px;
 }
 .map .txtBox p {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .map .txtBox p:nth-child(1) {
   font-size: 28px;
