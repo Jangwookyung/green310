@@ -1,0 +1,166 @@
+/* 언어설정 */
+@charset 'UTF-8';
+
+/* reset */
+* {margin: 0;
+   padding: 0;}
+ul, ol {list-style: none;}
+a {text-decoration: none;
+   color: #000;}
+img {border: none;
+     vertical-align: bottom;}
+
+/* vid 설정 */
+.vid {position: fixed;
+      width: 100%;
+      height: 100%;
+      top: -110px;}
+.vid video {min-width: 1600px;
+            width: 100%;}
+
+/* header 설정 */
+header {position: fixed;
+        width: 700px;
+        height: 100%;
+        background: linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%);
+        /* background: linear-gradient(to top, #fddb92 0%, #d1fdff 100%); */
+        transform: skewX(-40deg);
+        left: -500px;
+        top: 0;}
+
+/* sns 설정 */
+.sns {background-color: #ffafbd;
+      position: fixed;
+      width: 200px;
+      height: 50px;
+      right: 50px;
+      top: 40px;}
+
+/* txtBox 설정 */
+.txtBox {background-color: #c9ffbf;
+         position: fixed;
+         width: 340px;
+         height: 280px;
+         right: 0;
+         top: 50%;
+         margin-top: -140px;
+        opacity: 0.2;}
+
+/* slide 설정 */
+.slide {background-color: #c9ffbf;
+        position: fixed;
+        width: 800px;
+        height: 100%;
+        transform: skewX(-40deg);
+        right: -800px;
+        bottom: 0;
+        opacity: 0.3;
+        transition: all 0.5s;}
+.slide:hover {right: -500px;}
+
+/* slide content 설정 */
+.slide .con {background-color: #fbed96;
+             width: 400px;
+             height: 100%;
+             position: absolute;
+             left: 250px;
+             bottom: 0;
+             padding: 10px;
+             box-sizing: border-box;
+             transition: all 0.8s;}
+.slide .con p {position: absolute;
+               width: 300px;
+               height: 100px;
+               left: 50px;}
+.slide .con p:nth-child(1) {bottom: 280px;
+                            transition: all 1.2s;}
+.slide .con p:nth-child(2) {bottom: 170px;
+                            transition: all 1.0s;}
+.slide .con p:nth-child(3) {bottom: 60px;
+                            transition: all 0.8s;}
+.slide:hover .con {left: 50px;}
+.slide:hover .com p {left: 50px;}
+.slide .con em {font-size: 16px;
+                font-weight: bold;
+                color: #000;
+                transform: skew(40deg);
+                display: inline-block;}
+.slide .con a {}
+.slide .con a img {}
+
+/* gnb 설정 */
+.gnb {position: absolute;
+      right: 0;
+      top: 150px;}
+.gnb li {}
+.gnb li a {display: flex;
+           align-items: center;
+           justify-content: flex-end;
+           font-size: 18px;
+           font-weight: bold;
+           color: #333;
+           width: 220px;
+           height: 50px;
+           text-align: right;
+           padding-right: 40px;
+           margin-bottom: 5px;
+           box-sizing: border-box;
+           }
+.gnb li em {transform: skewX(40deg);
+            display: inline-block;}
+.gnb>li:nth-child(1) a {background-color: #ffafbd;
+                        color: #333;}
+.gnb li a:hover {background-color: #ffafbd;
+                 color: #333;}
+
+/* 2depth 설정 */
+.gnb>li {position: relative;}
+.gnb ul {position: absolute;
+         left: 0;
+         top: 0;
+         opacity: 0;
+         transition: all 0.3s;}
+.gnb ul li a {display: block;
+              width: 150px;
+              background-color: #c9ffbf;
+              color: #333;
+              border-bottom: 1px solid #fddb92;
+              line-height: 2;
+              height: 40px;
+              box-sizing: border-box;}
+.gnb>li:nth-child(1) ul {left: 205px;
+                         top: -10px;
+                         opacity: 0.8;}
+.gnb>li:hover ul {left: 205px;
+                  opacity: 0.8;}
+
+/* slide btn 설정 */
+.slide .btn {position: absolute;
+             left: 150px;
+             bottom: 50px;
+             color: #d558c8;
+             display: flex;
+             width: 150px;
+             height: 50px;
+             transition: all 0.5s;}
+.slide .btn p {position: absolute;
+               left: 0;
+               top: 0;
+               line-height: 0.3;
+               font-size: 80px;
+               transform: skew(40deg);}
+.slide .btn p:nth-child(1) {animation: ani linear 1.5s 0s infinite;}
+.slide .btn p:nth-child(2) {animation: ani linear 1.5s 0.5s infinite;}
+.slide .btn p:nth-child(3) {animation: ani linear 1.5s 1s infinite;}
+
+/* btn animation 설정 */
+@keyframes ani {
+        0% {left: 0;}
+        100% {left: -100px;
+              opacity: 0;
+              font-size: 120px;
+              line-height: 0.1;}
+}
+
+.slide:hover .btn {left: -1500px;
+                   opacity: 0;}
