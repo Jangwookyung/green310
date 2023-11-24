@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 레이아웃</title>
+</head>
+<body>
+    
+    <h1>플렉스 레이아웃</h1>
+    <p>부모자인 컨테이너 박스를 통해 자손자인 아이템박스를 자유배치한다.</p>
+
+    <ul>
+        <li>container (부모속성) 언어
+            <ul>
+                <li>display : flex 선언문</li>
+                <li>flex-direction : row / column 으로 가로정렬 / 세로정렬 표기 <br>
+                row(기본값), reverse를 통해 역방향 가능</li>
+                <li>flex-wrap : wrap/no wrap <br>
+                item의 가로값을 인정해주기 위해 줄바꿈으로 표현<br>
+                nowrap이 (기본값)</li>
+                <li>justify-content : item 정렬방법 / flex-start / flex-end / center / space-between / space-around</li>
+                <li>align-item : 아이템의 길이조절 또는 한 줄로 있을 경우 정렬방식<br>
+                stretch라는 확장의 개념의 속성이 기본값 그 외는 justify-content와 같음</li>
+            </ul>
+        </li>
+        <li>item (자손자속성) 언어
+            <ul>
+                <li>align-self : align-item 에서 사용한 속성과 같으나 건바이건 적용</li>
+                <li>order : item의 숫자를 설정한다. 숫자가 클수록 뒤로 밀림. 기본값은 0이며 음수값(마이너스값) 까지 있음</li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="testBox">
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+        </ul>
+    </div>
+
+    <style>
+        .testBox {background-color: aquamarine;
+                padding: 20px;}
+        .testBox ul {list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    background-color: violet;
+                    height: 300px;
+                    width: 400px;}
+        .testBox li {border: 1px solid #000;
+                    background-color: aliceblue;
+                    padding: 5px; 
+                    box-sizing: border-box;}
+    
+
+    /* 플렉스테스트 */
+
+    /* 컨테이너박스 */
+    .testBox ul {display : flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;}
+
+    /* 아이템 박스 */
+    .testBox li {width: 50px;
+                display: flex;
+                align-items: center;}
+
+    .testBox li:nth-child(1) {order: 4;}
+    .testBox li:nth-child(2) {}
+    .testBox li:nth-child(3) {align-self: flex-end;}
+    .testBox li:nth-child(4) {order: -2;}
+
+</style>
+</body>
+</html>

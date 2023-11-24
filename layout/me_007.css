@@ -1,0 +1,248 @@
+/* 언어설정 */
+@charset 'UTF-8';
+
+/* reset */
+ * {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none;
+   color: #000;}
+img{border: none;
+    vertical-align: bottom;}
+
+/* 박스1설정 */
+.box1 {position: relative;}
+.box1-1 {display: none;}
+
+.util {background-color: #546e7a;
+       height:40px;}
+.util ul{display: flex;
+         width: 100%;
+         height: 100%;
+         justify-content: flex-end;}
+.util li {display: flex;
+          justify-content: center;
+          align-items: center;}
+.util li a {display: block;
+            color: #fff;
+            padding:0 20px;
+            font-size: 12px;}
+.util li a:hover {color: #ccc;}
+
+.box1-2 {background-color: #37474f;
+         color: #fff;}
+.header {display: flex;
+         width: 80%;
+         margin: 0 auto;
+         position: relative;}
+.header h1 {width: 20%;
+            padding-top: 10px;}
+.header .gnb {width: 80%;}
+.gnb ul {display: flex;
+         justify-content: flex-end;}
+.gnb li {}
+.gnb a {display: block;
+        padding: 20px;
+        font-size: 18px;
+        color: #fff;}
+
+.gnb a:hover {background-color: #455a64;}
+
+.header span {font-size: 50px;
+              display: block;
+              position: absolute;
+              width: 60px;
+              height: 60px;
+              text-align: center;
+              line-height: 1;
+              right: 0;
+              top: 0;}    
+
+/* 모바일시 gnb 안보이게설정 */
+.header .gnb {display: none;}
+
+.box1-3 {height: 80vh;}
+.hero {width: 80%;
+       margin: 0 auto;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       height: 100%;
+       align-items: flex-start;}
+.hero .title {font-size: 60px;
+              margin-bottom: 30px;}
+.hero .txtBox {width: 40%;
+               height: 30%;
+               font-size: 22px;}
+.hero .more {border: 1px solid #fff;
+             border-radius: 10px;
+             color: #fff;
+             padding: 10px 30px;
+             cursor: pointer;
+             font-size: 18px;}
+
+.hero .more:hover {opacity: 0.6;}
+/* 태블릿시 hero 안보이게 설정 */
+.hero {display: none;}
+
+.vid {position: absolute;
+       left: 0;
+       top: 0;
+       z-index: -1;
+       opacity: 0.8;
+       width: 100%;}
+.vid video {width: 100%;
+            height: auto;}
+
+
+/* 박스2설정 */
+.box2>div {padding: 20px;
+           box-sizing: border-box;
+           -moz-box-sizing: border-box;
+           -webkit-box-sizing: border-box;
+           height: 250px;
+           position: relative;}
+.box2>div:nth-child(1) {background-color: #607d8b;}
+.box2>div:nth-child(2) {background-color: #78909c;}
+.box2>div:nth-child(3) {background-color: #90a4ae;}
+.box2>div:nth-child(4) {background-color: #b0bec5;}
+
+.box2 strong {font-size: 22px;
+              display: block;
+              margin-bottom: 20px;}
+.box2 p {width: 80%;}
+.box2 span {border: 1px solid #000;
+            padding: 10px;
+            display: inline-block;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;}
+
+
+/* 박스3 설정 */
+.box3>div {height: 450px;}
+.box3>div:nth-child(1){background-color: aliceblue;}
+.box3>div:nth-child(2){background-color: #cfd8dc;}
+.box3>div:nth-child(3){background-image: url(https://cdn.pixabay.com/photo/2016/11/23/15/40/puddle-1853607_1280.jpg);
+                       background-repeat: no-repeat;
+                       background-size: cover;
+                       background-attachment: fixed;
+                       color: #fff;}
+.box3>div:nth-child(3) span{color: #000;} 
+.box3>div>div {display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+               padding: 40px 10px;
+               box-sizing: border-box;
+               align-items: flex-start;
+               height: 100%;}
+.box3 .txtBox {width: 90%;
+               padding-bottom: 20px;}
+.box3 .imgBox {width: 100%;}
+
+.txtBox strong {font-size: 22px;
+                display: block;
+                margin-bottom: 20px;}
+.txtBox p {margin-bottom: 30px;}
+.txtBox span {display: inline-block;
+              background-color: #fff;
+              border-radius: 30px;
+              padding: 10px 30px;}
+
+.imgBox {height: 60%;
+         overflow: hidden;
+         align-self: flex-end;}
+.imgBox img {width: 100%;}
+
+/* 박스4 설정 */
+.box4 {background-color: aliceblue;}
+
+
+
+
+
+
+
+
+/* 미디어쿼리 구간########################################## */
+
+
+/* 태블릿구간 768px 이상구간 */
+@media(min-width:768px){
+
+    /* 설정 */
+
+    /* 박스1설정 */ 
+    .vid video {}
+
+    /* 박스2설정 */
+    .box2 {display: flex;
+           flex-wrap: wrap;}
+    .box2>div {width: 50%;}
+
+    /* 박스3 설정 */
+    .box3>div>div {flex-direction: row;}
+
+    /* 박스3 설정 */
+    .box3>div {height: 300px;}
+    .box3>div>div {padding: 20px 10px;
+                   align-items: flex-start;
+                   height: 100%;}
+    .box3 .txtBox {width: 55%;
+                   margin-left: 10px;
+                   margin-top: 10px;}
+    .box3 .imgBox {width: 40%;
+                   height: 250px;}
+
+    .txtBox strong {font-size: 22px;
+                    margin-bottom: 20px;}
+    .txtBox p {margin-bottom: 30px;}
+    .txtBox span {padding: 10px 30px;}
+
+    .imgBox {height: 60%;
+             align-self: flex-end;}
+
+    /* 박스 4 설정 */
+    iframe {width: 500px;
+          height: 200px;}
+
+
+
+
+} /*태블릿 끝//////////////////////////////////*/
+
+
+    /* 데스크탑구간 1024px 이상구간*/
+    @media(min-width:1024px){
+
+    /* 설정 */
+    
+    /* 박스1설정 */
+    .box1-1 {display: block !important;}
+    /* important는 css 중에서 우선순위로 먼저
+        지정을 하고 가라는 의미로 CSS 파일중 1회만 사용권고 */
+    .header .gnb {display: block;}
+    .header span {display: none;}
+    .hero {display: flex;}
+
+    /* 박스2설정 */
+    .box2>div {width: 25%;}
+
+    /* 박스3 설정 */
+    .box3>div {height: 45vh;}
+    .box3>div>div {width: 90%;
+                   margin-left: auto;}
+    .box3 .txtBox {width: 45%;
+                   padding-bottom: 20px;
+                   margin-top: 30px;}
+    .box3 .imgBox {margin-right: 10%;
+                   margin-bottom: 20px;
+                   height: 350px;}
+    .imgBox img {height: 100%;}
+    
+
+
+
+}/*데스크탑 끝 ////////////////////////////////*/
+
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜스폼 CSS</title>
+</head>
+<body>
+    
+    <h1>trasnform</h1>
+    <p>평면상에서 구현 가능한 회전, 이동, 왜곡, 스케일 등을 다룬다.</p>
+    <ul>
+        <li>trasnlate : 현재 요소의 위치값으로 x축, y축으로 이동
+            <ul>
+                <li>translate (x축 이동, y축 이동)</li>
+                <li>translateX (X축 이동)</li>
+                <li>translateY (Y축 이동)</li>
+            </ul>
+        </li>
+        <li>skew : 왜곡, 기울임 이라는 표현으로 각도에 맞춰 뒤틀어짐</li>
+        <li>scale : 원본크기 1을 기준으로 1보다 크면 확대, 작으면 축소.
+            -값은 없음. 단, 소수점으로 0표현
+        </li>
+        <li>rotate : 회전. X축, Y축 구분없이 오른쪽으로 회전. -값일 시 반대 방향.
+            <br>center, center기준. <strong>transform-origin으로 기준값 변경. (좌우 상하)</strong>
+        </li>
+    </ul>
+
+    <h2>transition</h2>
+    <p>별다른 소스와 언어없이 부드럽게 변화하는 모습을 나타냄
+        <br>CSS의 꽃이라 불리며 화려하게 보이게 진행할 수 있다.
+        <br>대부분 마우스 오버값과 병행할 때가 많다.
+    </p>
+
+
+
+    <h2>예제</h2>
+    <div class="box1">
+        <p><span>x, y 이동</span></p>
+        <p><span>x 이동</span></p>
+        <p><span>y 이동</span></p>
+    </div>
+
+    <h2>예제</h2>
+    <div class="box2">
+        <p><span>x, y 뒤틀림</span></p>
+        <p><span>x 뒤틀림</span></p>
+        <p><span>y 뒤틀림</span></p>
+    </div>
+
+    <h2>예제</h2>
+    <div class="box3">
+        <p><span>확대</span></p>
+        <p><span>축소</span></p>
+        <p><span>x 또는 y로 축소</span></p>
+    </div>
+
+    <h2>예제</h2>
+    <div class="box4">
+        <p><span>가운데에서 회전</span></p>
+        <p><span>왼쪽상단에서 회전</span></p>
+        <p><span>오른쪽하단에서 회전</span></p>
+    </div>
+
+
+
+    <style>
+        div {width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: space-around;}
+        div>p {width: 200px;
+              height: 200px;
+              border: 1px solid #000;}
+        div span {display: block;
+                  width: 100%;
+                  height: 100%;
+                  background-color: powderblue;
+                  opacity: 0.8;}
+
+    
+    /* translate 예제 */
+    .box1 p:nth-child(1) span {transition: all 0.5s;}
+    .box1 p:nth-child(1):hover span {transform: translate(308px, 371px);
+                                     background-color: palegreen;}
+    .box1 p:nth-child(2) span {transition: all 0.5s;}
+    .box1 p:nth-child(2):hover span {transform: translateX(309px);
+                                     background-color: palegreen;}
+    .box1 p:nth-child(3) span {transition: all 0.5s;}
+    .box1 p:nth-child(3):hover span {transform: translateY(-350px);
+                                     background-color: palegreen;}
+
+    /* skew 예제 */
+    .box2 p:nth-child(1) span {transition: all 0.3s;}
+    .box2 p:nth-child(1):hover span {transform: skew(60deg, -60deg);
+                                     background-color: mediumpurple;
+                                     opacity: 0.3;}
+    .box2 p:nth-child(2) span {transition: all 0.3s;}
+    .box2 p:nth-child(2):hover span {transform: skewX(70deg);
+                                     background-color: mediumpurple;}
+    .box2 p:nth-child(3) span {transition: all 0.3s;}
+    .box2 p:nth-child(3):hover span {transform: skewY(70deg);
+                                     background-color: mediumpurple;}
+
+    /* scale 예제 */
+    .box3 p:nth-child(1) span {transition: all 0.5s;}
+    .box3 p:nth-child(1):hover span {transform: scale(3);
+                                     background-color: sandybrown;
+                                     opacity: 0.3;}
+    .box3 p:nth-child(2) span {transition: all 0.5s;}
+    .box3 p:nth-child(2):hover span {transform: scale(0.05);
+                                     background-color: sandybrown;}
+    .box3 p:nth-child(3) span {transition: all 0.5s;}
+    .box3 p:nth-child(3):hover span {transform: scale(5, 0.1);
+                                     background-color: sandybrown;}
+
+    /* rotate 예제 */
+    .box4 p:nth-child(1) span {transition: all 1.5s;}
+    .box4 p:nth-child(1):hover span {transform: rotate(360deg);
+                                     background-color: pink;}
+    .box4 p:nth-child(2) span {transition: all 1s;}
+    .box4 p:nth-child(2):hover span {transform: rotate(270deg);
+                               transform-origin: left top;
+                               background-color: pink;}
+    .box4 p:nth-child(3) span {transition: all 1s;}
+    .box4 p:nth-child(3):hover span {transform: rotate(90deg);
+                               transform-origin: right bottom;
+                               background-color: pink;}
+
+
+    </style>
+
+</body>
+</html>

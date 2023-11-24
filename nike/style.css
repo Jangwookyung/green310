@@ -1,5 +1,7 @@
 /* 언어설정 */
 @charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 
 /* reset */
 * {margin: 0;
@@ -31,20 +33,45 @@ header {position: fixed;
 /* sns 설정 */
 .sns {background-color: #ffafbd;
       position: fixed;
-      width: 200px;
+      width: 300px;
       height: 50px;
       right: 50px;
       top: 40px;}
+.sns ul {display: block;
+         margin-top: 5px;}
+.sns ul li {float: left;
+            margin-right: 30px;}
+.sns ul li a {font-size: 25px;}
+.sns ul li a span {display: inline-block;
+                   text-indent: -9999px;}
 
 /* txtBox 설정 */
 .txtBox {background-color: #c9ffbf;
          position: fixed;
-         width: 340px;
+         width: 400px;
          height: 280px;
-         right: 0;
+         right: 2%;
          top: 50%;
          margin-top: -140px;
-        opacity: 0.2;}
+        opacity: 0.8;}
+.txtBox p {}
+.txtBox p:nth-child(1) {position: absolute;
+                        font-size: 160px;
+                        left: 0;
+                        top: 0;
+                        font-family: 'Monoton', sans-serif;
+                        color: #ffafbd;}
+.txtBox p:nth-child(2) {position: absolute;
+                        font-size: 34px;
+                        left: 0;
+                        bottom: 0;
+                        color: #333;
+                        font-family: 'Play', sans-serif;}
+.txtBox em {font-size: 50px;
+            font-family: 'Play', sans-serif;
+            color: #333;}
+.txtBox strong {margin-left: 15px;
+                color: #ffafbd;}
 
 /* slide 설정 */
 .slide {background-color: #c9ffbf;
@@ -164,3 +191,4 @@ header {position: fixed;
 
 .slide:hover .btn {left: -1500px;
                    opacity: 0;}
+

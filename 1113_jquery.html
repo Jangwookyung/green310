@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_제이쿼리</title>
+
+    <!-- 제이쿼리 연결 -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>제이쿼리란?</h1>
+    <p>Javascript가 하는 일은 HTML과 CSS요소를 선택한 뒤
+        동적으로 수정하여 웹화면에 인터렉션을 주는게 주목적이다.<br>
+        jQuery를 이용하면 로딩이 완료된 웹 페이지에 사용자가 원하는
+        행동에 따라 쉽게 인터렉션을 나타내게 할 수 있는 라이브러리 형태이다.
+    </p>
+    
+    <h2>작성법</h2>
+    <ol>
+        <li>다운로드 받지 않고 링크연결을 통해 최신버전에 해당하는 코드를 연결한다. 이를 CDN이라고 부른다.<br>
+            http://code.jquery.com/jquery-latest.js 를 script src에 연결한다.
+        </li>
+        <li>http://jquery.com 에 접속하여 파일을 다운로드하여 폴더에 저장 후 연결하여 사용한다.</li>
+        <li>링크연결을 완료한 후<br>
+            $(document).ready(function(){<br>
+            &nbsp;&nbsp;실행문 작성 기재<br>
+            })
+        </li>
+        <li>$(function(){<br>
+            &nbsp;&nbsp;실행문작성 기재<br>
+        })</li>
+    </ol>
+    
+    <h2>제이쿼리 선택자</h2>
+    <p>$('선택할요소')<br>
+        클래스 - .선택자 / id - #선택자 / 태그 - 태그명<br>
+        변수는 ''(따옴표)안에 넣지 않음</p>
+    <h2>제이쿼리 상세선택자</h2>
+    <ul class="ex">
+        <li>자식요소선택 - .children('선택자이름')</li>
+        <li class="li01">부모요소선택 - .parent()</li>
+        <li>순서값 설정 - .eq(순번 0부터) 요소의 순서</li>
+        <li>다음요소 - .next()</li>
+        <li>이전요소 - .perv()</li>
+        <li class="li02">형제요소선택 - .siblings() 나를 제외한</li>
+        <li><span>자손요소선택</span> - .find('선택자이름')</li>
+        <li>특정요소를 제외하기 - .not('선택자이름')</li>
+    </ul>
+
+    <script>
+        $(function(){
+            // 선택자 클래스ex의 백그라운드컬러를 변경
+            $('.ex').css({'background-color':'pink'})
+            // 선택자 클래스ex의 자손영역 글씨색을 변경
+            $('.ex').children().css({'color':'indigo'})
+
+            // 선택자 클래스 .li01의 부모영역에 선 긋기
+            $('.li01').parent().css({'border':'3px solid purple'})
+
+            // 선택자 클래스 .ex의 li중에 첫번째(0) 굵기 변경
+            $('.ex li').eq(0).css({'font-weight':'bold'})
+
+            // 선택자 클래스 .li01의 다음요소를 선택하여 밑줄긋기
+            $('.li01').next().css({'border-bottom':'1px dotted indigo'})
+
+            // 선택자 클래스 .li01의 이전요소를 선택하여 밑줄긋기
+            $('.li01').prev().css({'border-bottom':'1px dotted indigo'})
+
+            // 선택자 클래스 .li02의 형제자들을 이탤릭체로 만들기
+            $('.li02').siblings().css({'font-style':'italic'})
+
+            // 선택자 클래스 .ex안의 자손중 span을 찾아서 글씨 크기 키우기
+            $('.ex').find('span').css({'font-size':'22px'})
+
+            // 선택자 li 중에서 클래스 .li02를 제외하고 모두 아래여백 만들기
+            $('.ex').children('li').not('.li02').css({'margin-bottom':'10px'})
+
+            // 선택자는 여러번 재선택가능하다.
+        })
+    </script>
+
+    <h3>예제</h3>
+    <ul class="ex02">
+        <li>list1</li>
+        <li>list2</li>
+        <li class="list3">list3</li>
+        <li>list4</li>
+        <li class="list5">list5</li>
+        <li>list6</li>
+    </ul>
+
+    <script>
+        $(function(){
+            $('.ex02').css({'background-color':'aliceblue'})
+            $('.ex02').css({'font-size':'20px'})
+            $('.ex02').children().css({'color':'blue'})
+            $('.ex02 li').eq(0).css({'font-size':'32px'})
+            $('.ex02 li').eq(0).next().css({'list-style':'none'})
+            $('.ex02').find('.list3').css({'color':'skyblue'})
+            $('.ex02').children('.list3').next().siblings().css({'font-style':'italic'})
+            $('.ex02').children('li').not('.list5').css({'text-decoration':'underline'})
+            $('.list5').next().css({'font-weight':'bold'})
+        })
+    </script>
+
+    <h2>이벤트</h2>
+    <p>실제 사용자가 웹상에서 특정한 행동을 취했을때
+        그에 대한 상호작용이 나타나는 형태</p>
+
+    <ul>
+        <li>클릭 - .click(function(){ 실행문 })</li>
+        <li>마우스를 올렸을때 - .mouseenter(function(){ 실행문 })</li>
+        <li>마우스를 내렸을때 - .mouseleave(function(){ 실행문 })</li>
+        <li>마우스가 움직였을때 - .mousemove(function(){ 실행문 })</li>
+        <li>브라우저를 스크롤 했을때 - $(window).scroll(function(){ 실행문 })</li>
+        <li>브라우저를 리사이즈했을때 - $(window).resize(function(){ 실행문 })</li>
+    </ul>
+    <h4></h4>
+    <style>
+        h4 {width: 100%;
+            height: 100px;
+            background-color: aqua;}
+    </style>
+
+    <script>
+        $(function(){
+            // 화면이 리사이즈되었을때 h4안에 글씨가 나타나라
+            $(window).resize(function(){
+                $('h4').text('오늘도 수고하셨습니다.')
+            })
+        })
+    </script>
+</body>
+</html>

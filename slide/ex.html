@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드예제 </title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <style>
+        * {margin: 0;
+           padding: 0;}
+
+
+        .box1 {width: 280px;
+               height: 390px;
+               border: 3px solid #000;
+               margin: 0 auto;
+               overflow: hidden;}
+
+        .box1 ul{list-style: none;
+                 position: relative;}
+        .box1 li {position: absolute;
+                  left: 100%;
+                  opacity: 0.8;}
+
+        .box1 li:nth-child(1) {left: 0;}
+
+        h1 {position: fixed;
+            left: 20px;
+            top: 20px;}
+
+
+
+        .box2 {width: 280px;
+               height: 390px;
+               border: 3px solid #000;
+               margin: 100px auto;
+               overflow: hidden;}
+        .box2 ul{list-style: none;
+                 position: relative;}
+        .box2 li {position: absolute;
+                  right: 100%;}
+        .box2 li:nth-child(1) {right: 0;}
+
+    </style>
+
+    <script>
+
+        $(function(){
+
+            // 박스1을 왼쪽을 이동해라.
+            $('.box1 li').eq(0).css({'left':'0'}).stop().animate({'left':'-100%'},1200)
+            $('.box1 li').eq(1).css({'left':'100%'}).animate({'left':'0%'},1200);
+
+            // 0부터 2까지의 숫자를 무한반복해라.
+            // 시작변수 지정하기
+            var a=0;
+
+            setInterval(function(){
+                a++;
+                if(a==3)a=0
+                $('h1').text(a)
+
+                // 박스1을 왼쪽을 이동해라.
+                $('.box1 li').eq(a-1).css({'left':'0'}).stop().animate({'left':'-100%'},1200)
+                $('.box1 li').eq(a).css({'left':'100%'}).animate({'left':'0%'},1200);
+            },2000);
+
+            
+
+            // 시작변수 지정
+            var b=0;
+            // 0부터 2까지 숫자를 무한반복해라.
+            setInterval(function(){
+                // 늘어나라
+                b++;
+                if(b==3)b=0
+                // 박스2를 오른쪽으로 이동해라.
+                // $('.box2 li').eq(b-1).css({'right':'0'}).stop().animate({'right':'-100%'},1000)
+                // $('.box2 li').eq(b).css({'right':'100%'}).stop().animate({'right':'0'},1000)
+
+                $('.box2 li').eq(b-1).css({'left':'0'}).stop().animate({'left':'100%'},1000)
+                $('.box2 li').eq(b).css({'left':'-100%'}).stop().animate({'left':'0'},1000)
+
+            },2000)
+
+        })
+
+    </script>
+</head>
+<body>
+    <h1>0</h1>
+   <div class="box1">
+        <ul>
+            <li><img src="img/1.jpg" alt=""></li>
+            <li><img src="img/2.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+        </ul>
+        
+   </div>
+
+    <div class="box2">
+        <ul>
+            <li><img src="img/1.jpg" alt=""></li>
+            <li><img src="img/2.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

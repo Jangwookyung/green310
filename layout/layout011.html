@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃011</title>
+    <!-- 외부스타일시트 연결 -->
+    <link rel="stylesheet" href="layout011.css">
+    <!-- 그리드가이드 연결
+    <link rel="stylesheet" href="grid-guide.css"> -->
+    <!-- 폰트어썸 연결 -->
+    <script src="https://kit.fontawesome.com/dc9b491e4c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="box1">
+        <div class="box1-1">logo</div>
+        <div class="box1-2">
+            <nav>
+                <ul>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Sale</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="box2">
+            <div class="box2-1">
+                <p><img src="https://sitegenesis.production.deckers.coremedia.cloud/resource/image/2518584/portrait_ratio1x1/700/700/dcdd87f1e2058acc618eee6553ef3d29/F1D3AF7775A6C22AE96859417CFF303F/ugg-x-mad-happy.jpg" alt=""></p>
+                <!-- 동그라미모양만들고 사진넣기
+                    p한테 정사각형만들고 border radius 50%
+                    이미지 넣고 overflow hidden -->
+            </div>
+            <div class="box2-2">
+                <strong>Dream A<br>New Winter</strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eaque quisquam molestias laboriosam, aliquam non cupiditate aliquid rem praesentium nisi rerum reiciendis aperiam ut deserunt soluta repellendus reprehenderit numquam? Libero?
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum debitis autem, architecto illo ab, nulla expedita iusto voluptatibus laudantium in inventore repudiandae illum sed accusantium fuga natus nisi molestiae minima.
+                </p>
+                <div class="snsSet">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- 각 SNS는 아이콘으로 넣고 동그라미모양안에 넣는다
+                        마우스 hover 시 아이콘이 위쪽으로 자연스럽게 이동
+                        transition으로 -->
+                </div>
+            </div>
+        </section>
+        <section class="box3">
+            <div class="box3-1">
+                <h2>TITLE</h2>
+                <ul>
+                    <li>
+                        <img src="https://dms.deckers.com/ugg/image/upload/f_auto,q_auto,dpr_auto/b_rgb:eeeeee/w_483/v1663856082/catalog/images/transparent/1130354I-CHE_1.png?_s=RAABAB0" alt="">
+                        <div class="txtBox">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur quisquam placeat nobis hic atque minima repudiandae fugit adipisci quos sed obcaecati quam.</div>
+                    </li>
+                    <li>
+                        <img src="https://www.ugg.com/on/demandware.static/-/Sites/default/dwd2e9c859/ugg/nav/2023/11/navmb-h-11-1.jpg" alt="">
+                        <div class="txtBox">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur quisquam placeat nobis hic atque minima repudiandae fugit adipisci quos sed obcaecati quam.</div>
+                    </li>
+                    <li>
+                        <img src="https://sitegenesis.production.deckers.coremedia.cloud/resource/image/2527892/landscape_ratio4x3/900/675/a4b2e53c33b5d657c6c442669878744f/1F24D3E2C601CC726AD91C90E0BAF3B6/scuffete-ii-ansley-and-scuffita.jpg" alt="">
+                        <div class="txtBox">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur quisquam placeat nobis hic atque minima repudiandae fugit adipisci quos sed obcaecati quam.</div>
+                    </li>
+                    <li>
+                        <img src="https://www.ugg.com/on/demandware.static/-/Sites/default/dw5d6a59a3/ugg/nav/2023/11/navmb-r-11-1.jpg" alt="">
+                        <div class="txtBox">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur quisquam placeat nobis hic atque minima repudiandae fugit adipisci quos sed obcaecati quam.</div>
+                    </li>
+                    <!-- li에 사이즈값을 모두부여하고 txtBox를 포지션으로 이동해서
+                        li 아래부분에 안보이게 배치해놓음
+                        li가 꼭 기준이 되게 만들어놓고 img와 txtBox에 Z-index를 사용 -->
+                </ul>
+                
+            </div>
+            <div class="box3-2">
+                <h2>TITLE</h2>
+                <ul>
+                    <li><i class="fa fa-globe" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-comments" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-user" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+                </ul>
+                <!-- 마우스 hover시 동그라미내부에 백그라운드 컬러를 넣고
+                    아이콘의 색은 변경되게 설정 -->
+            </div>
+            <p class="left">&#10094;</p>
+            <p class="right">&#10095;</p>
+        </section>
+        <section class="box4">
+            <div class="box4-1">
+                <h2>TITLE</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nobis vero repudiandae vel esse fugiat! Sapiente pariatur doloremque enim placeat exercitationem! Pariatur rem officia omnis voluptates ab aperiam quis veniam.</p>
+            </div>
+            <div class="box4-2">
+                <form action="#">
+                    <input type="text" class="form_title">
+                    <input type="text" class="email">
+                    <textarea class="memo"></textarea>
+                    <input type="submit">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>copyright &copy; 2023. JANG. All Right Reserved.</p>
+    </footer>
+</body>
+</html>

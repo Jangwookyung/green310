@@ -1,0 +1,194 @@
+/* 언어 설정 */
+@charset 'UTF-8';
+
+/* reset 설정 */
+* {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none;
+   color: #000;}
+img {border: none;
+     vertical-align: bottom;}
+
+/* box1 설정 */
+.box1 {display: flex;
+       height: 15vh;
+       align-items: center;}
+.box1>div {width: 33%;}
+.logo {margin-left: 10%;}
+.logo img {width: 200px;
+           height: 120px;}
+
+.nav {}
+.nav ul {display: flex;
+         justify-content: flex-end;
+         margin-top: 50px;}
+.nav li {padding: 10px 30px;}
+.nav li a {font-size: 22px;
+           color: #03254c;}
+.nav li a:hover {color: #1167b1;}
+
+.util {}
+.util ul {display: flex;
+          margin-bottom: 90px;}
+.util li {margin: 0 10px;}
+.util li a {border: 2px solid #1167b1;
+            border-radius: 10px;
+            padding: 5px 40px;}
+.util li a:hover {color: #fff;
+                  background-color: #1167b1;}
+
+/* box2 설정 */
+.box2 {height: 80vh;
+       background-color: #03254c;
+       color: #d0efff;}
+
+.hero {display: flex;
+       height: 100%;}
+
+.hero .txtBox {width: 40%;
+               margin-left: 10%;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;}
+.hero .txtBox p {font-size: 20px;}
+.hero .txtBox h2 {margin: 10px 0 60px 0;
+                  font-size: 52px;}
+.hero .txtBox .btn {color: #d0efff;
+                    font-size: 22px;}
+.hero .txtBox .border {font-size: 20px;
+                       background-color: #d0efff;
+                       text-indent: -9999px;}
+
+.hero .txtBox .btn:hover {cursor: pointer;
+                          color: #fff;}
+
+.hero .imgBox {width: 50%;
+               height: 100%;
+               background-color: #03254c;}
+.hero .imgBox img {width: 100%;
+                   height: 90%;
+                   margin-top: 4%;}
+
+
+/* box3설정 */
+.box3 {height: 80vh;}
+
+.box3 .titleBox {text-align: center;
+           padding: 60px 0;}
+.box3 .titleBox h2 {margin-bottom: 20px;
+              font-size: 32px;}
+.box3 .titleBox p {width: 50%;
+             margin: 0 auto;}
+
+.box3 .listBox {display: flex;
+          justify-content: space-between;}
+.box3 .listBox>div {width: 25%;}
+
+.box3 .listBox1 {margin-left: 10%;}
+.box3 .listBox1 ul {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;}
+.box3 .listBox1 li {padding: 10px;}
+.box3 .listBox1 li:nth-child(2) {font-size: 22px;
+                                 padding: 10px;
+                                 font-weight: bold;}
+.box3 .listBox1 li:nth-child(3) {text-align: center;}
+.box3 .listBox1 li img {}
+
+.box3 .listBox2 {}
+.box3 .listBox2 ul {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;}
+.box3 .listBox2 li {padding: 10px;}
+.box3 .listBox2 li:nth-child(2) {font-size: 22px;
+                                 padding: 10px;
+                                 font-weight: bold;}
+.box3 .listBox2 li:nth-child(3) {text-align: center;}
+.box3 .listBox2 li img {}
+
+.box3 .listBox3 {margin-right: 10%;}
+.box3 .listBox3 ul {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;}
+.box3 .listBox3 li {padding: 10px;}
+.box3 .listBox3 li:nth-child(2) {font-size: 22px;
+                                 padding: 10px;
+                                 font-weight: bold;}
+.box3 .listBox3 li:nth-child(3) {text-align: center;}
+.box3 .listBox3 li img {}
+
+.box3 .listBox li:hover {cursor: pointer;}
+
+
+/* box4 설정 */
+.box4 {height: 70vh;
+       background-color: #03254c;
+       color: #fff;
+       padding: 40px;}
+.box4-inner {display: flex;
+             width: 80%;
+             height: 100%;
+             margin: 0 auto}
+.box4-inner>div{width: 50%;}
+
+.box4-1 {
+         padding-left: 20px;
+         padding: 50px 0 50px 30px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: flex-start;}
+.box4-1 .title {font-size: 32px;
+                font-weight: bold;
+                color: #d0efff;}
+.box4-1 .txt {font-size: 18px;
+              width: 60%;
+              margin: 70px 0 50px 0;}
+.box4-inner .btn {display: inline-block;
+                  background-color: #d0efff;
+                  padding: 10px 40px;
+                  color: #000;}
+
+.box4-inner .btn:hover {background-color: #1167b1;
+                        cursor: pointer;}
+
+.box4-2 {margin-bottom: 50px;}
+.box4-2 ul {display: flex;
+            flex-direction: column;}
+.box4-2 li {padding: 40px;}
+.box4-2 h3 {font-size: 28px;
+            margin-bottom: 15px;
+            color: #d0efff;}
+.box4-2 p {width: 75%;}
+
+/* box5 */
+.box5 {background-color: #eee;
+       color: #03254c;}
+.box5-inner {height: 40vh;
+             display: flex;}
+
+.box5-1 {margin-left: 10%;
+         width: 20%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: flex-start;}
+.box5-1 h3 {font-size: 42px;
+            margin-bottom: 20px;}
+
+.box5-2 {margin-right: 10%;
+         width: 60%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: flex-start;
+         padding: 0 100px;}
+
+.box5-2 p {font-size: 27px;}

@@ -1,0 +1,317 @@
+/* 언어설정 */
+@charset 'UTF-8';
+
+/* reset */
+ * {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none;
+   color: #000;}
+img{border: none;
+    vertical-align: bottom;}
+
+/* 박스1설정 */
+.box1-1 {display: none;}
+
+.util {background-color: #333;
+       height:60px;}
+.util ul{display: flex;
+         width: 100%;
+         height: 100%;
+         justify-content: flex-end;}
+.util li {display: flex;
+          justify-content: center;
+          align-items: center;}
+.util li a {display: block;
+            color: #fff;
+            padding:0 20px;
+            font-size: 12px;}
+.util li a:hover {color: #ccc;}
+
+.box1-2 {}
+.header {display: flex;
+         width: 80%;
+         margin: 0 auto;
+         position: relative;}
+.header h1 {width: 20%;}
+.header .gnb {width: 80%;
+              background-color: #ddd;}
+.gnb ul {display: flex;
+         justify-content: flex-end;}
+.gnb li {}
+.gnb a {display: block;
+        padding: 20px;
+        font-size: 20px;}
+
+.header span {font-size: 50px;
+              display: block;
+              position: absolute;
+              width: 60px;
+              height: 60px;
+              text-align: center;
+              line-height: 1;
+              right: 0;
+              top: 0;}    
+
+/* 모바일시 gnb 안보이게설정 */
+.header .gnb {display: none;}
+
+.box1-3 {height: 80vh;
+         background-image: url(https://picsum.photos/id/62/1280/1024);
+         background-size: cover;
+         background-position: center top;}
+.hero {width: 80%;
+       margin: 0 auto;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       height: 100%;
+       align-items: flex-start;}
+.hero .title {font-size: 60px;
+              margin-bottom: 30px;}
+.hero .txtBox {width: 40%;
+               height: 30%;
+               font-size: 22px;}
+.hero .more {background-color: #fff;
+             padding: 10px 30px;
+             cursor: pointer;
+             font-size: 18px;}
+
+.hero .more:hover {opacity: 0.6;}
+/* 태블릿시 hero 안보이게 설정 */
+.hero {display: none;}
+
+
+/* 박스2설정 */
+.box2>div {padding: 20px;
+           box-sizing: border-box;
+           -moz-box-sizing: border-box;
+           -webkit-box-sizing: border-box;
+           height: 250px;
+           position: relative;}
+.box2>div:nth-child(1) {background-color: #ffffcc;}
+.box2>div:nth-child(2) {background-color: #ffff66;}
+.box2>div:nth-child(3) {background-color: #ffffaa;}
+.box2>div:nth-child(4) {background-color: #ffff00;}
+
+.box2 strong {font-size: 22px;
+              display: block;
+              margin-bottom: 20px;}
+.box2 p {width: 80%;}
+.box2 span {border: 1px solid #000;
+            padding: 10px;
+            display: inline-block;
+            position: absolute;
+            right: 10px;
+            bottom:10px;}
+
+
+/* 박스3 설정 */
+.box3>div {height: 450px;}
+.box3>div:nth-child(1){background-color: #33cccc;}
+.box3>div:nth-child(2){background-color: #33aaaa;}
+.box3>div:nth-child(3){background-color: #339999;}
+.box3>div>div {display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+               padding: 40px 10px;
+               box-sizing: border-box;
+               align-items: flex-start;
+               height: 100%;}
+.box3 .txtBox {width: 100%;
+               padding-bottom: 20px;}
+.box3 .imgBox {width: 100%;}
+
+.txtBox strong {font-size: 22px;
+                display: block;
+                margin-bottom: 20px;}
+.txtBox p {margin-bottom: 30px;}
+.txtBox span {display: inline-block;
+              background-color: #fff;
+              padding: 10px 30px;}
+
+.imgBox {height: 60%;
+         overflow: hidden;
+         align-self: flex-end;}
+.imgBox img {width: 100%;}
+
+
+/* 박스4 설정 */
+.box4 {padding: 20px 0 0 0;
+       height: auto;
+       overflow: hidden;
+       position: relative;
+       box-sizing: border-box;}
+.box4-1 {display: flex;
+         width: 80%;
+         margin: 0 auto;
+         height: auto;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;}
+.box4-1>div {width: 100%;
+             height: 100%;}
+
+.map {text-align: center;}
+.map h3 {font-size: 28px;
+         margin-bottom: 10px}
+.mapBox {width: 100%;
+         display: flex;
+         height: 100%;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;}
+.mapBox iframe {width: 100%;
+                height: 80%;}
+.mapBox ul {margin-left: 30px;}
+.mapBox li {padding: 10px;}
+
+/* flex로 설정 */
+/* .snsSet {background-color: #999;
+         display: flex;
+         justify-content: flex-end;
+         flex-direction: column;
+         align-items: flex-end;}
+.snsSet h3 {}
+.snsSet ul {display: flex;
+            justify-content: flex-end;}
+.snsSet li {}
+.snsSet a {} */
+
+/* position 활용 */
+.box4-1>div.snsSet {background-color: skyblue;
+                    position: relative;
+                    height: 100px;}
+.snsSet h3 {position: absolute;
+            right: 50%;
+            bottom: 50%;
+            margin-right: -100px;
+            width: 200px;
+            text-align: center;}
+.snsSet ul {position: absolute;
+            right: 50%;
+            margin-right: -100px;
+            bottom: 50%;
+            margin-bottom: -50px;
+            width: 200px;
+            height: 50px;}
+.snsSet li {float: left;}
+
+
+.box4-2 {padding: 20px;
+         background-color: #333;
+         color: #fff;}
+.top {position: fixed;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 0;
+      bottom: 0;
+      background-color: #fff;}
+
+
+
+
+
+
+
+/* 미디어쿼리 구간########################################## */
+
+
+/* 태블릿구간 768px 이상구간 */
+@media(min-width:768px){
+
+    /* 설정 */
+
+    /* 박스1설정 */
+
+
+    /* 박스2설정 */
+    .box2 {display: flex;
+            flex-wrap: wrap;}
+    .box2>div {width: 50%;}
+
+    /* 박스3 설정 */
+    .box3>div>div {flex-direction: row;}
+
+    /* 박스3 설정 */
+    .box3>div {height: 300px;}
+    .box3>div>div {padding: 20px 10px;
+                   align-items: flex-start;
+                   height: 100%;}
+    .box3 .txtBox {width: 60%;}
+    .box3 .imgBox {width: 30%;}
+
+    .txtBox strong {font-size: 22px;
+                    margin-bottom: 20px;}
+    .txtBox p {margin-bottom: 30px;}
+    .txtBox span {padding: 10px 30px;}
+
+    .imgBox {height: 60%;
+             align-self: flex-end;}
+
+
+
+} /*태블릿 끝//////////////////////////////////*/
+
+
+/* 데스크탑구간 1024px 이상구간*/
+@media(min-width:1024px){
+
+    /* 설정 */
+    
+    /* 박스1설정 */
+    .box1-1 {display: block !important;}
+    /* important는 css 중에서 우선순위로 먼저
+        지정을 하고 가라는 의미로 CSS 파일중 1회만 사용권고 */
+    .header .gnb {display: block;}
+    .header span {display: none;}
+    .hero {display: flex;}
+
+    /* 박스2설정 */
+    .box2>div {width: 25%;}
+
+    /* 박스3 설정 */
+    .box3>div>div {width: 90%;
+               margin-left: auto;}
+
+    /* 박스4 설정 */
+    .box4 {}
+    .box4-1 {height: 300px;
+             flex-direction: row;}
+    .box4-1>div {width: 50%;}
+    .mapBox {width: 70%;
+             display: flex;
+             height: 100%;
+             flex-direction: row;
+             justify-content: flex-start;
+             align-items: flex-start}
+    .mapBox iframe {width: 80%;
+                    height: 80%;}
+    /* position 활용 */
+    .box4-1>div.snsSet {background-color: skyblue;
+                        position: relative;
+                        height: 300px;}
+    .snsSet h3 {position: absolute;
+                right: 0;
+                bottom: 60px;
+                margin-right: 0;
+                width: 200px;
+                text-align: center;}
+    .snsSet ul {position: absolute;
+                right: 0;
+                margin-right: 0;
+                width: 200px;
+                height: 50px;
+                bottom: 0;
+                margin-bottom: 0;}
+    .snsSet li {float: left;}
+
+
+
+}/*데스크탑 끝 ////////////////////////////////*/
+
+

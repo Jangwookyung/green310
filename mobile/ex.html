@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+            <ul>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="wrap-ex">
+        <div class="box-ex">
+            <ul>
+                <li>곧</li>
+                <li>있</li>
+                <li>으</li>
+                <li>면</li>
+                <li>집</li>
+            </ul>
+            <ul>
+                <li>에</li>
+                <li>간</li>
+                <li>다</li>
+                <li>희</li>
+                <li>희</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <style>
+        * {margin: 0;
+           padding: 0;}
+        ul, ol {list-style: none;}
+
+        .wrap {width: 500px;
+               height: 200px;
+               background-color: aqua;
+               margin: 20px auto;
+               position: relative;
+               overflow: hidden;}
+
+        .wrap .box {display: flex;}
+        .wrap ul {display: flex;
+                  position: absolute;}
+
+        .wrap li {width: 100px;
+                  height: 200px;
+                  border: 2px solid #000;
+                  box-sizing: border-box;}
+
+        .wrap ul:nth-child(1) {left: 0;
+                               animation: ani2 10s linear infinite;}
+        .wrap ul:nth-child(2) {left: 100%;
+                               animation: ani1 10s linear infinite;}
+
+        .wrap:hover ul {animation-play-state: paused;}
+        .wrap li:hover {background-color: skyblue;}
+
+        @keyframes ani1 {
+            0% {left: 100%;}
+            50% {left: 0%;}
+            100% {left: -100%;}
+        }
+
+        @keyframes ani2 {
+            0% {left: 0;}
+            50% {left: -100%;}
+            50.0001% {left: 100%;}
+            100% {left: 0;}
+        }
+
+
+        .wrap-ex {width: 500px;
+                  height: 200px;
+                  background-color: aqua;
+                  margin: 20px auto;
+                  position: relative;
+                  overflow: hidden;}
+
+        .wrap-ex .box-ex {display: flex;}
+        .wrap-ex ul {display: flex;
+                  position: absolute;}
+
+        .wrap-ex li {width: 100px;
+                  height: 200px;
+                  border: 2px solid #000;
+                  box-sizing: border-box;}
+
+        .wrap-ex ul:nth-child(1) {left: 0;
+                               animation: exani2 10s linear infinite;}
+        .wrap-ex ul:nth-child(2) {left: 100%;
+                               animation: exani1 10s linear infinite;}
+
+        .wrap-ex:hover ul {animation-play-state: paused;}
+        .wrap-ex li:hover {background-color: skyblue;}
+
+        @keyframes exani1 {
+            0% {left: 100%;}
+            50% {left: 0%;}
+            100% {left: -100%;}
+        }
+
+        @keyframes exani2 {
+            0% {left: 0;}
+            50% {left: -100%;}
+            50.0001% {left: 100%;}
+            100% {left: 0;}
+        }
+
+    </style>
+</body>
+</html>

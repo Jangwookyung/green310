@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_엘리먼트</title>
+</head>
+<body>
+    
+    <section class="todoList">
+        <h1>오늘 저녁에 할일</h1>
+        <ul id="list"></ul>
+    </section>
+
+
+    <script>
+
+        var todo = ['잠자기','마사지받기','게임하기','장보기','티비보기','넷플릭스보기','디즈니플러스보기','빨래하기']
+        todo.push('청소하기') // 변수추가하기
+        console.log(todo) // 모든 변수를 다부름
+        console.log(todo,length) // 변수의 갯수를 찾아줌
+        console.log(todo[3-1]) // 3번째 있는 변수의 내용을 알려줌
+        // 변수의 순번은 0부터 시작
+
+        for(var i=0; i<todo.length; i++){
+            var li=document.createElement('li'); // li 라는 태그를 만들음
+            li.textContent=todo[i];  // li라는 태그에 내용을 변수 순번의 내용을 넣음
+            document.getElementById('list').appendChild(li)
+            // list 안에 자손자로 다음번 내용으로 출력함
+        }
+
+    </script>
+
+
+
+    <section class="weeklist">
+        <h1>주말에 할일</h1>
+        <ol id="list2"></ol>
+
+        <form action="#" id="form">
+            <input type="text" name="list">
+            <input type="submit" value="검색">
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('form').onsubmit=function(){
+            console.log('클릭했습니다.')
+            var txt=document.getElementById('form').list.value;
+            console.log(txt);
+            return false;
+        }
+
+        
+
+
+        var weekend=['자전거타기','쇼핑하기','티비보기','유튜브보기','게임하기']
+        weekend.push('드라이브하기')
+
+        console.log(weekend)
+        console.log(weekend.length)
+        console.log(weekend[4-1])
+
+        for(var w=0; w<weekend.length; w++){
+            var li=document.createElement('li')
+            li.textContent=weekend[w];
+
+            document.getElementById('list2').appendChild(li)
+        }
+    </script>
+
+</body>
+</html>

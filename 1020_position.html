@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position 속성</title>
+</head>
+<body>
+    
+    <h1>position속성</h1>
+    <p>웹의 요소를 부모를 기준으로 내 마음대로 움직일 수 있는 속성.</p>
+
+    <ul>
+        <li>relative - 기준값 (부모속성에게 작성하거나 속성을 무력화 시킬 때 사용)</li>
+        <li>absolute - 이동값 (움직이게 할 요소에게 작성)</li>
+        <li>fixed - 고정값 (브라우저 기준으로 적용, 부모 없음)</li>
+    </ul>
+
+    <h2>특징</h2>
+    <ul>
+        <li>absolute만 있고 relative가 없는 경우 body가 relative가 된다.</li>
+        <li>형제자끼리는 서로의 기준이 될 수 없다.</li>
+        <li>absolute를 하게 되면 박스의 위치값을 잃게 된다.</li>
+        <li>left/right/top/bottom 등으로 위치값을 표기한다.</li>
+        <li>fixed의 경우 스크롤을 하더라도 움직이지 않는 브라우저의 위치를 잡는다.</li>
+    </ul>
+
+
+    <h3>예제</h3>
+
+    <div class="box1">
+        <p>박스1</p>
+        <p>박스2</p>
+    </div>
+    <div class="box2">
+        <p>박스1</p>
+        <p>박스2</p>
+    </div>
+    <div class="box3">
+        <p>박스1</p>
+        <p>박스2</p>
+    </div>
+    <div class="box4">
+        <p>박스1</p>
+        <p>박스2</p>
+    </div>
+    <div class="box5">
+        <p>박스1</p>
+        <p>박스2</p>
+    </div>
+
+    <style>
+        div {background-color: #eee;
+            border: 3px solid #000;
+            margin-bottom: 20px;}
+        div>p {width: 200px;
+                height: 200px;
+                background-color: aqua;
+                margin: 0;
+                border: 1px solid red;}
+
+        .box1 {position: relative;}
+        .box1>p:nth-child(1) {position: absolute;
+                            right: 0;
+                            top: 0;}
+        
+        
+        .box2 {position: relative;
+                height: 300px;}
+        .box2>p:nth-child(1) {position: absolute;
+                            left: 100px;
+                            top: 50px;}
+        .box2>p:nth-child(2) {position: absolute;
+                            left: 300px;
+                            bottom: 50px;}
+
+
+        .box3 {position: relative;}
+        .box3>p:nth-child(1) {position: fixed;
+                            right: 0;
+                            bottom: 0;}
+        
+
+        .box4 {position: absolute;
+                right: 50px; top: 100px;}
+        .box4>p:nth-child(1) {position: absolute;
+                            left: 50pxs;
+                            top: 50px;}
+
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <title>TimeSwitch_site 예제</title>
+    <!-- 외부스타일 시트 연결 -->
+    <link rel="stylesheet" href="style01.css">
+    <!-- 그리드가이드 연결 
+    <link rel="stylesheet" href="grid-guide.css">-->
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/85ac904405.js" crossorigin="anonymous"></script>
+    <!-- 파비콘 연결 -->
+    <link rel="shortcut icon" href="img/icon.png">
+    <link rel="apple-touch-icon" href="img/icon.png">
+
+    <!-- 제이쿼리 설정 -->
+    <script>
+        $(document).ready(function(){
+
+            $('#btn').click(function(){
+                $('#menu').slideToggle()
+                $('.box2').addClass('on')
+            })
+
+        })
+    </script>
+
+</head>
+<body>
+    <div class="boxA">
+        <div class="box1">
+            <div class="logo">
+                <h1><a href="#">
+                    <img src="img/logo-large.png" alt="" width="230" height="30">
+                </a></h1>
+            </div>
+        </div>
+        <div class="box2">
+            <button id="btn" >
+                <i class="fa fa-bars" aria-hidden="true"></i><span>menu</span>
+            </button>
+            <nav class="gnb" id="menu">
+                <ul>
+                    <li><a href="#">메인</a></li>
+                    <li><a href="#">연혁</a></li>
+                    <li><a href="#">사업소개</a></li>
+                    <li><a href="#">채용정보</a></li>
+                    <li><a href="#">문의</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="box3">
+        <img src="img/header.jpg" alt="" class="main_img">
+    </div>
+
+    <div class="box6">
+        <div class="box6-1">
+            <div class="summary">
+                <a href="#">
+                    <i class="fa fa-database" aria-hidden="true"></i>
+                    <h2>데이터분석 / 해석</h2>
+                    <p>목적에 맞는 다양한 각도로 데이터를 분석 해석합니다.</p>
+                </a>
+            </div>
+        </div>
+        <div class="box6-2">
+            <div class="summary">
+                <a href="#">
+                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    <h2>데이터 시각화</h2>
+                    <p>해석결과는 데이터 시각화해서 활용할수 있게합니다.</p>
+                </a>
+            </div>
+        </div>
+        <div class="box6-3">
+            <div class="summary">
+                <a href="#">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <h2>24시간 지원</h2>
+                    <p>24시간 대응 팀으로 장애에 신속하게 대응합니다.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box4">
+        <div class="news">
+            <h2>공지사항</h2>
+            <ul>
+                <li><a href="#"><time datetime="2023-11-01">11/01</time>데이터센터 유지보수를 수행합니다.</a></li>
+                <li><a href="#"><time datetime="2023-10-30">10/30</time>안드로이드 애플리케이션 버전 1.2를 출시했습니다.</a></li>
+                <li><a href="#"><time datetime="2023-10-20">10/20</time>세미나/캠패인 과 관련된 공지사항</a></li>
+                <li><a href="#"><time datetime="20232-10-01">10/01</time>그래프 표시의변경 반식을 쉽게 바꿨습니다.</a></li>
+            </ul>
+        </div>
+        <div class="snsSet">
+            <p class="sns-info">최신 정보를 여기서도 받아보세요!</p>
+            <ul>
+                <li><a href="#"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i>Twitter</a></li>
+                <li><a href="#"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i>Facebook</a></li>
+                <li><a href="#"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i>Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="box5">
+        <div class="copyright">
+            <p>copyright &copy; 2023. JANG. Allrights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

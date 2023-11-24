@@ -1,0 +1,227 @@
+/* 언어설정 */
+@charset 'UTF-8';
+
+/* reset */
+* {margin: 0; 
+    padding: 0;}
+ul, ol {list-style: none;}
+a {text-decoration: none;
+    color: #000;}
+img {border: none;
+    vertical-align: bottom;}
+
+
+
+
+/* 미디어 쿼리 설정############## */
+/* 759px이하 일때 설정 */
+@media(max-width:759px){
+       .box2.on {border-top: 1px solid #000;
+              margin-top: 10px}
+       #menu {display: none;}
+       .gnb ul {flex-direction: column;
+                width: 100%;}
+       .gnb li {width: 100%;}
+       .gnb ul a {border-bottom: 1px solid #ddd;}
+}
+
+
+/* 760px 이상일때 */
+@media(min-width:760px){
+
+/* box1과 box2 가로정렬 */
+.boxA {display: flex;}
+.boxA>div {width: 50%;}
+
+/* after 방식 */
+/* .box1 {float: left;
+       width: 50%;}
+.box2 {float: left;
+       width: 50%;}
+.boxA::after {content: '';
+              display: block;
+              clear: both;} */
+
+/* box4 설정 */
+.box4 {display: flex;
+       flex-wrap: wrap;
+       flex-direction: row;}
+
+.news {width: 68%;
+       margin-right: 2%;}
+.snsSet {width: 30%;}
+
+/* box6 설정 */
+.box6 {display: flex;
+       justify-content: space-between;}
+.box6>div {width: 32%;}
+/* btn 설정 */
+#btn {display: none;}
+
+
+}
+/* 1290px 이상일때 */
+@media(min-width:1290px){
+.boxA, .box3, .box4, .copyright, .box6 {
+       width: 1280px;
+       margin: 0 auto;
+}
+
+
+
+
+}
+
+
+
+
+
+/* logo 설정 */
+.logo {}
+.logo h1 {font-size: 32px;}
+.logo h1 a {}
+
+
+/* nav 설정 */
+.gnb {display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      height: 100%;}
+.gnb ul {display: flex;}
+.gnb ul li {}
+.gnb ul li a {font-size: 14px;
+              padding: 10px 15px;}
+
+.gnb ul li a:hover {background-color: #eee;}
+
+
+/* img 설정 */
+.main_img {max-width: 100%;}
+
+
+/* box6 설정 */
+.box6 {display: flex;
+       justify-content: space-between;}
+.box6>div {width: 32%;}
+.box6-1 {}
+.box6-2 {}
+.box6-3 {}
+.summary {background-color: ivory;
+          text-align: center;}
+.summary a {}
+.summary i {font-size: 34px;
+            padding: 40px 0;
+            display: block;}
+.summary h2 {font-size: 20px;
+             padding: 10px;}
+.summary p {font-size: 14px;
+            padding: 20px;
+            background-color: beige;}
+
+.fa-database {background-color: pink;}
+.fa-bar-chart {background-color: paleturquoise;}
+.fa-clock-o {background-color: palegreen;}
+
+
+
+
+
+/* 공지사항 설정 */
+.news {
+       border: 5px solid #ddd;
+       box-sizing: border-box;
+       padding: 20px;}
+.news h2 {font-size: 18px;
+          color: #555;
+          margin-bottom: 10px;}
+.news ul {}
+.news li {}
+.news a {font-size: 14px;
+         border-bottom: dotted 2px #ccc;
+         display: block;
+         padding: 5px;
+        }
+.news time {font-weight: bold;
+            color: #777;
+            margin-right: 10px;}
+
+.news a:hover {color: #999;}
+
+
+/* SNS 설정 */
+
+.snsSet ul {}
+.snsSet li {}
+.snsSet li a {display: block;
+              background-color: #ccc;
+              color: #fff;
+              font-size: 14px;
+              padding: 10px;
+              border-radius: 5px;
+              margin-bottom: 10px;}
+.snsSet li:nth-child(1) a{background-color: #1da1f2;}
+.snsSet li:nth-child(2) a{background-color: #1877f2;}
+.snsSet li:nth-child(3) a{background-color: #e1306c;}
+.snsSet i {font-size: 20px;
+           margin-right: 10px;
+           vertical-align: top;}
+
+.sns-info {background-color: #ccc;
+           text-align: center;
+           padding: 10px 0;
+           font-size: 14px;
+           margin-bottom: 20px;}
+/* sns-info 말풍선 */
+.sns-info {
+	position: relative;
+	background: #cccccc;
+}
+.sns-info:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(204, 204, 204, 0);
+	border-top-color: #cccccc;
+	border-width: 10px;
+	margin-left: -10px;
+}
+
+/* copyright 설정 */
+.copyright p {font-size: 14px;
+              color: #666;}
+.box5 {background-color: #eee;
+       padding: 15px;}
+
+
+/* 위아래 여백 설정 */
+.boxA {padding-top: 20px;
+       padding-bottom: 15px;}
+.box4 {padding: 20px 0;}
+.news {margin-bottom: 10px;}
+.box6 {padding-top: 20px;}
+.box6>div{padding-bottom: 10px;}
+
+
+/* 좌우 여백 설정 */
+.boxA, .box4, .box5 {padding-right: 15px;
+                     padding-left: 15px;}
+
+/* btn 설정 */
+#btn {background-color: #fff;
+       border: solid 1px #aaa;
+       padding: 6px 12px;
+       border-radius: 5px;
+       position: absolute;
+       right: 15px;
+       top: 20px;
+       cursor: pointer;}
+ #btn i {font-size: 18px;
+         color: #888;}
+ #btn span {text-indent: -9999px;
+           display: inline-block;}
+ 

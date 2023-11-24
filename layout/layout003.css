@@ -1,0 +1,338 @@
+/* 언어설정 */
+@charset 'UTF-8';
+
+/* reset */
+* {margin: 0;
+   padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none;
+   color: #000;}
+img {border: none;
+     vertical-align: bottom;}
+
+
+
+
+/* box1 설정 */
+.box1 {background-color: #FBF8ED;}
+.box1-inner {display: flex;
+             justify-content: space-between;
+             align-items: center;
+             width: 80%;
+             margin: 0 auto;
+             height: 70px;}
+.box1 .logo {}
+.box1 .logo h1 {font-size: 32px;
+               color: #625E4E;}
+.gnb {margin-right: 0%;}
+.gnb ul {display: flex;}
+.gnb li {}
+.gnb a {padding: 20px 20px;
+        font-size: 16px;
+        color: #625E4E;
+        font-weight: 400;}
+.gnb a:hover {color: #88B8AE;}
+
+
+
+/* box2 설정 */
+/* localMenu flex설정, menu block설정 */
+.box2 {height: 90vh;
+       background-color: #B0AB99;}
+
+.hero {display: flex;
+       height: 75%;
+       background-color: #DCD4B8;}
+.hero .txtBox {width: 40%;
+               margin-left: 10%;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;}
+.hero .txtBox p {padding: 10px;
+                 width: 80%;}
+.hero .txtBox p:nth-child(1) {font-size: 40px;
+                              font-weight: bold;}
+.hero .txtBox p:nth-child(2) {font-size: 20px;}
+.hero .imgBox {width: 50%;}
+.hero .imgBox img {width: 100%;
+                   height: 100%;}
+
+.localMenu {display: flex;
+            width: 80%;
+            height: 25%;
+            margin: 0 auto;}
+.localMenu a {width: 25%;
+              padding: 40px;}
+.localMenu a>div {display: block;}
+.localMenu a>div p {font-size: 24px;
+                    margin-bottom: 40px;}
+.localMenu a>div span {border: 1px solid #000;
+                       padding: 10px 30px;
+                       border-radius: 30px;}
+
+.localMenu a:nth-child(2) {border-right: 1px solid #625E4E;
+                           border-left: 1px solid #625E4E;}
+.localMenu a:nth-child(3) {border-right: 1px solid #625E4E;}
+
+.localMenu a:hover {background-color: #DCD4B8;}
+
+
+
+
+/* box3 설정 */
+.box3 {height: 70vh;
+       background-color: #FBF8ED;}
+.box3-1 {width: 80%;
+        margin: 0 auto;
+        height: 30%;
+        padding-top: 20px;}
+.box3 .box3-1 h1 {font-size: 32px;
+                  text-align: center;
+                  margin: 40px 0 10px 0;}
+.box3 .box3-1 p {text-align: center;
+                 width: 40%;
+                 margin: 0 auto;}
+
+.box3-2 {display: flex;
+         height: 60%;
+         width: 80%;
+         margin: 0 auto;}
+.box3-2 .imgBox {width: 50%;
+                 height: 90%;
+                 margin: auto 0;}
+.box3-2 .imgBox img {width: 90%;
+                     height: 100%;
+                     margin-left: 5%;}
+
+.box3-2 .listBox {width: 50%;}
+.box3-2 .listBox ul {width: 80%;
+                     height: 80%;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     margin-top: 10%;
+                     margin-left: 10%;}
+.box3-2 .listBox li {margin: 0 25px;
+                     width: 100%;
+                     height: 100%;}
+.box3-2 .listBox a {width: 100%;
+                    height: 100%;}
+.box3-2 .listBox img {margin-left: 38%;
+                      margin-bottom: 20px;}
+.box3-2 .listBox strong {font-size: 18px;
+                         display: flex;
+                         justify-content: center;
+                         margin-bottom: 10px;}
+.box3-2 .listBox p {text-align: center;
+                    width: 100%;
+                    margin-top: 25px;}
+
+
+
+/* box4 설정 */
+.box4 {height: 80vh;
+       background-color: #ccc;}
+.box4 h2 {font-size: 32px;
+          text-align: center;
+          padding-top: 40px;}
+
+.box4-1 {width: 80%;
+         margin: 0 auto;
+         display: flex;
+         height: 90%;}
+.box4-1 .listBox {width: 50%;}
+.box4-1 .listBox ul {width: 80%;
+                     margin: 13%;}
+.box4-1 .listBox li {display: flex;
+                     padding: 22px 0;}
+.box4-1 .listBox img {margin: 0 20px 0 50px;}
+.box4-1 .listBox p {}
+
+.box4-1 .imgBox {width: 50%;}
+.box4-1 .imgBox ul {width: 90%;
+                    height: 70%;
+                    margin: 13% 0 0 0 ;
+                    position: relative;}
+.box4-1 .imgBox li {width: 100%;
+                    height: 100%;
+                    position: absolute;}
+.box4-1 .imgBox img {width: 100%;
+                     height: 100%;}
+
+
+
+/* box5설정 */
+.box5 {background-color: #FBF8ED;}
+.box5-inner {height: 70vh;
+       display: flex;
+       width: 80%;
+       margin: 0 auto;}
+.box5-1 {width: 40%;
+         padding: 60px;}
+.box5-1 .title {font-size: 32px;
+                font-weight: ;
+                margin-bottom: 35px;
+                margin-left: 30px;}
+
+.box5-1 .listBox {width: 100%;}
+.box5-1 .listBox ul {margin-top: 30px;}
+.box5-1 .listBox li {display: flex;
+                     padding: 30px;}
+.box5-1 .listBox img {padding-right: 15px;}
+.box5-1 .listBox p {font-size: 18px;}
+
+.box5-1 .btnBox {display: flex;
+                 justify-content: center;
+                 margin: 60px;}
+.box5-1 .btnBox p {border: 1px solid #625E4E;
+                   background-color: #625E4E;
+                   color: #fff;
+                   padding: 10px 35px;
+                   border-radius: 30px;
+                   margin: 0 10px;}
+.box5-1 .btnBox p:hover {background-color: #DCD4B8;
+                         border: 1px solid #DCD4B8;
+                         cursor: pointer;}
+
+.box5-2 {width: 60%;
+         margin: 40px 0 40px 20px;}
+.box5-2 img {width: 100%;
+             height: 100%}
+
+
+/* box6 설정 */
+.box6 {height: 40vh;
+       display: flex;
+       background-color: #B0AB99;}
+.box6>div {width: 32%;}
+.box6-1 {margin-left: 10%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;}
+.box6-1 strong {font-size: 24px;
+                margin-bottom: 20px;}
+.box6-1 p {text-align: center;}
+
+.box6-2 {width: 80%;
+         margin: 30px 40px 30px 40px;}
+.box6-2 img {width: 70%;
+             margin-left: 15%;
+             height: 100%;}
+
+.box6-3 {margin-right: 10%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;}
+.box6-3 strong {font-size: 24px;
+                margin-bottom: 20px;}
+.box6-3 p {text-align: center;}
+
+
+
+/* box7 설정 */
+.box7 {height: 95vh;
+       padding-top: 2%;
+       background-color: #FBF8ED;}
+
+.box7-1 {position: relative;
+         width: 100%;
+         height: 75%;}
+.container {width: 80%;
+            margin: 0 auto;
+            height: 95%;}
+.container img {width: 100%;
+                height: 100%;}
+.container p {font-size: 30px;}
+.left {position: absolute;
+       border: 1px solid #000;
+       background-color: #fff;
+       opacity: 0.8;
+       padding: 30px;
+       left: 0;
+       top: 50%;
+       margin-top: -30px;}
+.right {position: absolute;
+        border: 1px solid #000;
+        background-color: #fff;
+        opacity: 0.8;
+        padding: 30px;
+        right: 0;
+        top: 50%;
+        margin-top: -30px;}
+
+.box7-2 {padding: 20px 40px;
+         height: 21%;
+         background-color: #B0AB99;}
+.trailer {width: 100%;
+          height: 100%;}
+.trailer ul {display: flex;
+             width: 100%;
+             height: 100%;}
+.trailer li {margin: 0 20px;
+             width: 100%;
+             height: 100%;}
+.trailer img {width: 100%;
+              height: 100%;}
+
+
+
+/* box8 설정 */
+.box8 {display: flex;
+       height: 55vh;
+       background-color: #FBF8ED;}
+
+.box8-1 {margin-left: 10%;
+         width: 40%;
+         padding: 50px 0;}
+.box8-1 img {width: 100%;
+             height: 100%;}
+
+.box8-2 {margin-right: 10%;
+         width: 40%;
+         padding: 50px 0;}
+.box8-2 .txtBox {background-color: #B0AB99;
+                 width: 100%;
+                 height: 100%;
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;}
+.box8-2 h2 {font-size: 32px;
+            padding-left: 80px;
+            padding-bottom: 30px;}
+.box8-2 p {width: 80%;
+           padding-left: 80px;}
+
+
+/* box9 설정 */
+.box9 {height: 55vh;
+       display: flex;
+       background-color: #858b97;}
+
+.box9-1 {width: 40%;
+         margin-left: 10%;
+         padding: 40px 0;}
+.box9-1 h2 {font-size: 32px;}
+.box9-1 p {}
+.box9-2 {width: 40%;
+         margin-right: 10%;}
+
+/* box10 설정 */
+.box10 {display: flex;
+        background-color: #717786;
+        height: 100px;}
+
+.box10>div {width: 40%;}
+
+.box10-1 {margin-left: 10%;
+          font-size: 28px;
+          padding-top: 30px;}
+.box10-2 {margin-right: 10%;
+          display: flex;
+          justify-content: center;
+          align-items: center}
+.box10-2 ul {display: flex;}
+.box10-2 li {}
+.box10-2 a {padding: 20px 30px;
+        font-size: 16px;}

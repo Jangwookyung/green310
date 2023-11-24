@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자속성</title>
+
+    <!-- 외부스타일시트 연결 -->
+
+    <link rel="stylesheet" href="css/style_text.css">
+</head>
+<body>
+    <h1>글자속성</h1>
+
+    <h2>정렬방식</h2>
+    <ul>
+        <li>text-align 
+            <ul>
+                <li>특징 - 왼쪽, 오른쪽, 가운데, 양쪽 정렬이 있다.</li>
+                <li>justify - 라는 양쪽 정렬은 가로값의 크기보다 내용이 많을 경우에만 적용된다.</li>
+                <li>주의사항 - 블럭요소만 적용</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <h2>행간정렬</h2>
+    <ul>
+        <li>line-height
+            <ul>
+                <li>행간으로 글자가 두줄이상 바뀌어 들어갈때 사용</li>
+                <li>한 줄일 경우 패딩처럼 위의 공간을 늘릴때 사용하기도 함</li>
+                <li>특징 - 적용값 12px은 1.0이며 텍스트 기본행간은 1.6이다.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>장식속성</h2>
+    <ul>
+        <li>text-decoration 
+            <ul>
+                <li>none - 없음</li>
+                <li>underline - 밑줄 (a태그 기본값)</li>
+                <li>overline - 윗줄</li>
+                <li>line-through - 가운데줄 (취소선)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>자간속성</h2>
+    <ul>
+        <li>letter-spacing - 단위와 함께 작성, 글자와 글자의 사잇값 조절</li>
+    </ul>
+
+    <h2>들여쓰기속성</h2>
+    <ul>
+        <li>text-indent 
+            <ul>
+                <li>들여쓰기 속성으로 내부로 밀어쓰는 효과 px 같은 단위 적용</li>
+                <li>음수값 적용가능 - 대체텍스트를 못 쓸 경우 음성인식은 가능하며 화면에서 보이지 않게 할 경우 사용</li>
+                <li>주의사항 - 블럭요소만 사용 가능</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>대소문자 구분방식</h2>
+    <ul>
+        <li>text-transform 
+            <ul>
+                <li>uppercase - 대문자로 변경</li>
+                <li>lowercase - 소문자로 변경</li>
+                <li>capitalize - 문장의 첫 글자를 대문자로 변환</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- 목록스타일 -->
+    <h2>목록스타일</h2>
+    <p>ol, ul 등의 list 목록을 나타내는 블릿의 형태를 변형할 수 있다.</p>
+    <ul>
+        <li>none - 리스트스타일을 없앰</li>
+        <li>disc - ul의 기본형</li>
+        <li>circle - 2뎁스 ul 기본형</li>
+        <li>square - 사격형박스</li>
+        <li>roman - 로마숫자 표기
+            <ul>
+                <li>lower-roman - 로마숫자 소문자</li>
+                <li>upper-roman - 로마숫자 대문자</li>
+            </ul>
+        </li>
+        <li>latin - 알파벳 표기
+            <ul>
+                <li>lower-latin - 알파벳 소문자</li>
+                <li>upper-latin - 알파벳 대문자</li>
+            </ul>
+        </li>
+        <li>lower-greek - 알파베타 표기</li>
+    </ul>
+
+
+
+    <h2>예제</h2>
+    <div class="align">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et dolor, exercitationem consequuntur vitae laborum cumque obcaecati fugiat veritatis perferendis iste illum placeat, debitis a libero id praesentium. Natus, numquam obcaecati!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, possimus provident cum odio dolorem delectus dignissimos modi sequi mollitia nisi sapiente. Sapiente, dolore? Modi unde vitae ipsa assumenda quas aperiam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, officiis quibusdam pariatur adipisci recusandae consequatur dolore, totam, porro odit eligendi esse. Voluptas ab dignissimos, maxime quam pariatur quaerat autem perferendis?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nostrum fuga explicabo sapiente adipisci voluptas necessitatibus alias repellat est. Non minus eaque suscipit quo, odio qui nulla culpa aliquam accusamus.</p>
+    </div>
+
+    <div class="line">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et dolor, exercitationem consequuntur vitae laborum cumque obcaecati fugiat veritatis perferendis iste illum placeat, debitis a libero id praesentium. Natus, numquam obcaecati!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, possimus provident cum odio dolorem delectus dignissimos modi sequi mollitia nisi sapiente. Sapiente, dolore? Modi unde vitae ipsa assumenda quas aperiam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, officiis quibusdam pariatur adipisci recusandae consequatur dolore, totam, porro odit eligendi esse. Voluptas ab dignissimos, maxime quam pariatur quaerat autem perferendis?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nostrum fuga explicabo sapiente adipisci voluptas necessitatibus alias repellat est. Non minus eaque suscipit quo, odio qui nulla culpa aliquam accusamus.</p>
+    </div>
+
+    <div class="decoration">
+        <p>Lorem <a href="#">ipsum dolor sit amet consectetur, adipisicing elit.</a> Et dolor, exercitationem consequuntur vitae laborum cumque obcaecati fugiat veritatis perferendis iste illum placeat, debitis a libero id praesentium. Natus, numquam obcaecati!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, possimus provident cum odio dolorem delectus dignissimos modi sequi mollitia nisi sapiente. Sapiente, dolore? Modi unde vitae ipsa assumenda quas aperiam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, officiis quibusdam pariatur adipisci recusandae consequatur dolore, totam, porro odit eligendi esse. Voluptas ab dignissimos, maxime quam pariatur quaerat autem perferendis?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nostrum fuga explicabo sapiente adipisci voluptas necessitatibus alias repellat est. Non minus eaque suscipit quo, odio qui nulla culpa aliquam accusamus.</p>
+    </div>
+
+    <div class="letter">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et dolor, exercitationem consequuntur vitae laborum cumque obcaecati fugiat veritatis perferendis iste illum placeat, debitis a libero id praesentium. Natus, numquam obcaecati!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, possimus provident cum odio dolorem delectus dignissimos modi sequi mollitia nisi sapiente. Sapiente, dolore? Modi unde vitae ipsa assumenda quas aperiam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, officiis quibusdam pariatur adipisci recusandae consequatur dolore, totam, porro odit eligendi esse. Voluptas ab dignissimos, maxime quam pariatur quaerat autem perferendis?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nostrum fuga explicabo sapiente adipisci voluptas necessitatibus alias repellat est. Non minus eaque suscipit quo, odio qui nulla culpa aliquam accusamus.</p>
+    </div>
+
+    <div class="indent">
+        <p><em>Lorem ipsum</em> dolor sit amet consectetur, adipisicing elit. Et dolor, exercitationem consequuntur vitae laborum cumque obcaecati fugiat veritatis perferendis iste illum placeat, debitis a libero id praesentium. Natus, numquam obcaecati!</p>
+        <p><em>Lorem ipsum</em>, dolor sit amet consectetur adipisicing elit. Consectetur, possimus provident cum odio dolorem delectus dignissimos modi sequi mollitia nisi sapiente. Sapiente, dolore? Modi unde vitae ipsa assumenda quas aperiam.</p>
+        <p><em>Lorem ipsum</em> dolor sit amet consectetur adipisicing elit. Tempora, officiis quibusdam pariatur adipisci recusandae consequatur dolore, totam, porro odit eligendi esse. Voluptas ab dignissimos, maxime quam pariatur quaerat autem perferendis?</p>
+        <p><em>Lorem ipsum</em> dolor sit amet, consectetur adipisicing elit. Sit nostrum fuga explicabo sapiente adipisci voluptas necessitatibus alias repellat est. Non minus eaque suscipit quo, odio qui nulla culpa aliquam accusamus.</p>
+    </div>
+
+    <div class="transform">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et dolor, exercitationem consequuntur vitae laborum cumque obcaecati fugiat veritatis perferendis iste illum placeat, debitis a libero id praesentium. Natus, numquam obcaecati!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, possimus provident cum odio dolorem delectus dignissimos modi sequi mollitia nisi sapiente. Sapiente, dolore? Modi unde vitae ipsa assumenda quas aperiam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, officiis quibusdam pariatur adipisci recusandae consequatur dolore, totam, porro odit eligendi esse. Voluptas ab dignissimos, maxime quam pariatur quaerat autem perferendis?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nostrum fuga explicabo sapiente adipisci voluptas necessitatibus alias repellat est. Non minus eaque suscipit quo, odio qui nulla culpa aliquam accusamus.</p>
+    </div>
+
+
+    <ul class="liststyle001">
+        <li>list</li>
+        <li>list</li>
+    </ul>
+
+    <ul class="liststyle002">
+        <li>list</li>
+        <li>list</li>
+    </ul>
+
+    <ul class="liststyle003">
+        <li>list</li>
+        <li>list</li>
+    </ul>
+
+    <ul class="liststyle004">
+        <li>list</li>
+        <li>list</li>
+    </ul>
+
+    <ul class="liststyle005">
+        <li>list</li>
+        <li>list</li>
+    </ul>
+
+    <ul class="liststyle006">
+        <li>list</li>
+        <li>list</li>
+    </ul>
+
+    <ul class="liststyle007">
+        <li>list</li>
+        <li>list</li>
+    </ul>
+
+
+
+    <!-- 특수문자 작성법 -->
+    <h3>특수문자 - html 코드표</h3>
+
+    <p>태그 요소내부에 특수문자를 기입할 경우 유니코드 형식으로 나타내야 정식으로 읽을 수 있음.
+        <, &, %, 띄어쓰기 등은 html 유니코드가 읽지 못함</p>
+    
+    <a href="https://www.w3schools.com/html/html_entities.asp" target="_blank">코드표 바로가기</a>
+
+    <h3>예제</h3>
+    <p>띄 어 쓰  &nbsp;&nbsp;&nbsp;  기</p>
+    <p>copyright &copy; Allrights Reserved.</p>
+
+    <h3>특수문자 - CSS코드표</h3>
+    <p>:before 또는 :after에 content를 특수기호로 삽입할때 사용</p>
+
+    <a href="https://www.w3schools.com/cssref/css_entities.php" target="_blank">코드표 바로가기</a>
+
+    <p class="before"> 앞에 특수기호 </p>
+    <p class="after">뒤에 특수기호</p>
+
+
+
+</body>
+</html>

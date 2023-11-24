@@ -1,0 +1,188 @@
+/* 언어 설정 */
+@charset 'UTF-8';
+
+/* reset 설정 */
+* {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none;
+   color: #000;}
+img {border: none;
+     vertical-align: bottom;}
+
+
+
+
+
+/* box1 설정 */
+.box1{display: flex;
+      height: 10vh;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #a1887f;}
+.box1-1{text-indent: -9999px;
+        background-image: url(img/UGG-logo.png);
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 250px;}
+
+.box1-2{margin-right: 20px;}
+.box1-2 nav {}
+.box1-2 ul {display: flex;
+            justify-content: center;
+            align-items: center;}
+.box1-2 li {padding: 10px 20px;
+            margin: 0 10px;}
+.box1-2 a {font-size: 18px;}
+
+.box1-2 li:hover {cursor: pointer;
+                  background-color: #d7ccc8;}
+
+
+
+/* box2 설정 */
+.box2 {width: 80%;
+       height: 70vh;
+       margin: 0 auto;
+       display: flex;}
+
+.box2-1 {width: 20%;}
+.box2-1 p {width: 300px;
+           height: 300px;
+           border-radius: 50%;
+           margin-top: 40%;
+           margin-left: 5%;}
+.box2-1 img {width: 100%;
+             height: 100%;
+             border-radius: 50%;}
+
+.box2-2 {width: 80%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: flex-start;
+         padding-left: 5%;}
+.box2-2 strong {font-size: 48px;
+                color: #3e2723;}
+.box2-2 p {margin-top: 30px;
+           margin-bottom: 35px;
+           width: 80%;
+           font-size: 20px;
+           color: #3e2723;}
+
+.snsSet {margin-top: 50px;}
+.snsSet ul {display: flex;
+            align-items: flex-start;}
+.snsSet li {margin-right: 40px;
+            background-color: #a1887f;
+            border-radius: 50%;
+            transition: all 0.3s;}
+.snsSet a {}
+.snsSet i {font-size: 32px;
+           color: #fff;
+           padding: 25px;}
+.snsSet li:nth-child(2) i{padding: 25px 31px;}
+.snsSet li:nth-child(3) i{padding: 25px 27px;}
+
+.snsSet li:hover {transform: translateY(-20px);}
+
+
+
+/* box3 설정 */
+.box3 {height: 120vh;
+       background-color: #d7ccc8;
+       position: relative;}
+
+.box3-1 {width: 80%;
+         margin: 0 auto;}
+.box3-1 h2 {display: inline-block;
+            margin-left: 44%;
+            font-size: 20px;
+            font-weight: normal;
+            background-color: #efebe9;
+            border-radius: 20px;
+            padding: 5px 60px;
+            margin-top: 60px;
+            margin-bottom: 30px;}
+.box3-1 ul {display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;}
+.box3-1 li {width: 50%;
+            text-align: center;
+            position: relative;}
+.box3-1 img {width: 500px;
+             height: 300px;
+             padding: 20px 0;
+             z-index: 0;}
+.box3-1 .txtBox {width: 480px;
+                 height: 80px;
+                 background-color: #bcaaa4;
+                 padding: 5px 10px;
+                 position: absolute;
+                 left: 9%;
+                 bottom: 6%;
+                 z-index: -1;
+                 overflow: hidden;}
+
+.box3-1 li:hover .txtBox{z-index: 1;
+                         opacity: 0.8;}
+
+.box3-2 {width: 80%;
+         margin: 0 auto;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;}
+.box3-2 h2 {background-color: #a1887f;
+            color: #efebe9;
+            border-radius: 20px;
+            padding: 5px 60px;
+            font-size: 20px;
+            font-weight: normal;
+            margin-top: 50px;
+            margin-bottom: 50px;}
+.box3-2 ul {display: flex;}
+.box3-2 li {margin: 0 60px;
+            padding: 30px;
+            border-radius: 50%;
+            background-color: #efebe9;}
+.box3-2 i {font-size: 28px;
+           color: #5d4037;}
+.box3-2 li:nth-child(2) {padding: 30px 27px;}
+.box3-2 li:nth-child(3) {padding: 30px 32px;}
+.box3-2 li:nth-child(4) {padding: 30px 28px;}
+
+.box3-2 li:hover {cursor: pointer;
+                  background-color: #5d4037;}
+.box3-2 li:hover i{color: #d7ccc8;}
+
+.box3 p {font-size: 32px;
+         background-color: #5d4037;
+         color: #efebe9;
+         padding: 10px 20px;}
+.left {position: absolute;
+       left: 0;
+       top: 37%;}
+.right {position: absolute;
+        right: 0;
+        top: 37%;}
+
+.box3 p:hover {background-color: #a1887f;
+               color: #3e2723;
+               cursor: pointer;}
+
+
+
+/* box4 설정 */
+.box4 {background-color: #a1887f;
+       height: 100vh;}
+
+.box4-1 {}
+.box4-1 h2 {}
+.box4-1 p {}
+
+.box4-2 {}
+.box4-2 form {}

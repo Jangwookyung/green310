@@ -1,0 +1,162 @@
+/* 언어설정 */
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+
+/* reset */
+* {margin: 0;
+   padding: 0;}
+ul, ol {list-style: none;}
+a {text-decoration: none;
+   color: #000;}
+img {border: none;
+     vertical-align: bottom;}
+
+div {overflow: hidden;}
+h2 {color: #8c7676}
+
+
+/* box1 설정 */
+.box1 {background-image: url(https://cdn.pixabay.com/photo/2023/06/24/09/17/stone-age-8084898_1280.jpg);
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center top;
+       height: 80vh;
+       box-sizing: border-box;}
+.box1-1 {}
+.navi {display: flex;
+       justify-content: center;}
+.navi li {}
+.navi a {display: block;
+         padding: 10px;
+         color: #fff;}
+/* .navi a:hover {background-color: #eee;} */
+.box1-2 {text-align: center;
+         font-size: 60px;
+         line-height: 1.2;
+         font-family: 'Stylish', serif;
+         padding-top: 100px;
+         box-sizing: border-box;
+         color: #fff;
+         letter-spacing: 20px;
+         overflow: visible;}
+
+.box1-2 p {animation: ani 5s linear infinite alternate;}
+
+/* 애니메이션 설정 */
+@keyframes ani {
+       0% {}
+       100% {transform: scale(1.5);}
+}
+
+
+
+/* box2 설정 */
+.box2 {display: flex;
+       height: 50vh;}
+.box2>div {width: 50%;
+           box-sizing: border-box;
+           -moz-box-sizing: border-box;
+           -webkit-box-sizing: border-box;}
+.box2-1 {padding: 30px 20px;}
+.box2-1 h2 {margin-bottom: 20px;}
+.box2-1 p {width: 60%;}
+.box2-2 {height: 100%;
+         background-color: #fdffe7;
+         background-image: url(img/image-removebg-preview\ \(2\).png);
+         background-repeat: no-repeat;
+         background-position: right center;
+         background-size: contain;}
+
+
+/* box3 설정 */
+.box3 {padding: 20px;
+       background-color: #ccc;
+       background-image: url(https://img.freepik.com/free-vector/primal-tribe-people-banners-set_1284-19120.jpg?w=826&t=st=1698973510~exp=1698974110~hmac=b1a9075aa7fb37911250529838eadc2c83d7cf86f289e197079dc82576efc4cf);
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position: left center;
+       text-align: center;
+       height: 400px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;}
+.box3 h2 {margin-bottom: 10px;
+          font-size: 40px;}
+.box3 p {margin-bottom: 50px;}
+.box3>div {}
+.box3-inner {background-color: rgba(0, 0, 0, 0.6);
+             width: 70%;
+             padding: 30px 0;
+             color: #fff;}
+
+
+/* box4 설정 */
+.box4 {display: flex;
+       height: 350px;}
+.box4 .box4-1 {width: 40%;}
+.box4 .box4-2 {width: 60%;}
+
+.box4>div {box-sizing: border-box;
+           -moz-box-sizing: border-box;
+           -webkit-box-sizing: border-box;}
+.box4-2 {padding: 30px 20px;}
+.box4-2 h2 {margin-bottom: 20px;}
+.box4-2 p {width: 60%;}
+.box4-1 {height: 100%;
+         background-color: #999;}
+
+.box4 img {transform: translateY(-100px);
+           width: 100%;}
+
+
+/* box5 설정 */
+.box5 {padding: 30px 20px 30px 50px;
+       background-image: url(https://www.ccnewsline.co.kr/news/photo/201704/38158_29028_4246.JPG);
+       background-position: right center;
+       background-size: cover;
+       height: 300px;
+       box-sizing: border-box;}
+.box5 h2 {margin-bottom: 10px;}
+.box5 p {margin-bottom: 50px;}
+.box5>div {}
+.box5-1 {background-color: rgba(255, 255, 255, 0.8);
+         width: 200px;
+         height: 100%;
+         padding: 20px;
+         box-sizing: border-box;}
+
+/* box6 설정 */
+.box6 {display: flex;
+       height: 250px;}
+.box6 .box6-1 {width: 60%;}
+.box6 .box6-2 {width: 40%;}
+
+.box6>div {box-sizing: border-box;
+           -moz-box-sizing: border-box;
+           -webkit-box-sizing: border-box;}
+.box6-1 {padding: 30px 20px;}
+.box6-1 h2 {margin-bottom: 20px;}
+.box6-1 p {width: 60%;}
+.box6-2 {height: 100%;
+         background-color: #999;}
+.box6 iframe {width: 100%;
+              height: ;}
+
+
+/* box7 설정 */
+.box7 {background-color: #000;
+       color: #fff;
+       padding: 20px;}
+.box7-1 {text-align: center;
+         margin-bottom: 20px;}
+.box7-1 h2 {margin-bottom: 10px;}
+.box7-1>div {}
+
+.box7-2 {}
+.box7-2>ul {display: flex;
+            justify-content: flex-end;}
+.box7-2>ul>li {}
+.box7-2 a {color: #fff;
+           display: block;
+           padding: 10px;}

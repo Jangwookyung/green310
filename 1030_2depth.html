@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2뎁스 제작하기</title>
+
+    <style>
+        * {margin: 0;
+           padding: 0;}
+        ul {list-style: none;}
+        div>ul {display: flex;}
+        div>ul>li {width: 25%;
+                   box-sizing: border-box;}
+        div a {display: block;
+               color: #000;
+               text-decoration: none;
+               text-align: center;
+               padding: 10px 0;
+               border: 2px solid #000;}
+        div a:hover {background-color: #333;
+                     color: #fff;}
+        
+        /* ex01 드롭다운메뉴 */
+        .ex01 {height: 300px;}
+        .ex01 ul ul {display: none;}
+        .ex01 ul>li:hover>ul {display: block;}
+
+        /* ex02 가로정렬다운메뉴 */
+        .ex02 {height: 200px;}
+        .ex02 ul {position: relative;}
+        .ex02 ul ul {display: none;
+                     position: absolute;
+                     width: 100%;
+                     left: 0;
+                     top: 100%;}
+        .ex02 ul ul li {width: 25%;}
+        .ex02 ul>li:hover>ul {display: flex;}
+
+        /* ex03 세로다운메뉴 */
+        .ex03 {height: 500px;}
+        div.ex03>ul {display: flex;
+                     flex-direction: column;}
+        .ex03 ul ul {display: none;}
+        .ex03 li li a {background-color: antiquewhite;}
+        .ex03>ul>li:hover>ul {display: block;}
+
+        /* ex04 세로슬라이드 메뉴 */
+        div.ex04>ul {display: flex;
+                     flex-direction: column;
+                     width: 300px;}
+        .ex04>ul>li {width: 100%;
+                     position: relative;
+                     background-color: aqua;}
+        .ex04 ul ul {position: absolute;
+                     width: 100%;
+                     left: 0;
+                     top: 0;
+                     z-index: -1;
+                     transition: all 0.5s;
+                     opacity: 0;}
+        .ex04>ul>li:hover>ul {left: 100%;
+                              opacity: 1;}
+
+    </style>
+
+</head>
+
+
+<body>
+    <h1>다양한 방식의 2뎁스 메뉴</h1>
+    <div class="ex01">
+        <ul>
+            <li><a href="#">menu1</a>
+                <ul>
+                    <li><a href="#">sub1</a></li>
+                    <li><a href="#">sub2</a></li>
+                    <li><a href="#">sub3</a></li>
+                    <li><a href="#">sub4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu2</a>
+            <ul>
+                    <li><a href="#">sub1</a></li>
+                    <li><a href="#">sub2</a></li>
+                    <li><a href="#">sub3</a></li>
+                    <li><a href="#">sub4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu3</a>
+            <ul>
+                    <li><a href="#">sub1</a></li>
+                    <li><a href="#">sub2</a></li>
+                    <li><a href="#">sub3</a></li>
+                    <li><a href="#">sub4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu4</a>
+            <ul>
+                    <li><a href="#">sub1</a></li>
+                    <li><a href="#">sub2</a></li>
+                    <li><a href="#">sub3</a></li>
+                    <li><a href="#">sub4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="ex02">
+        <ul>
+            <li><a href="#">menu1</a>
+                <ul>
+                    <li><a href="#">1sub1</a></li>
+                    <li><a href="#">1sub2</a></li>
+                    <li><a href="#">1sub3</a></li>
+                    <li><a href="#">1sub4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu2</a>
+            <ul>
+                    <li><a href="#">2sub1</a></li>
+                    <li><a href="#">2sub2</a></li>
+                    <li><a href="#">2sub3</a></li>
+                    <li><a href="#">2sub4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu3</a>
+            <ul>
+                    <li><a href="#">3sub1</a></li>
+                    <li><a href="#">3sub2</a></li>
+                    <li><a href="#">3sub3</a></li>
+                    <li><a href="#">3sub4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu4</a>
+            <ul>
+                    <li><a href="#">4sub1</a></li>
+                    <li><a href="#">4sub2</a></li>
+                    <li><a href="#">4sub3</a></li>
+                    <li><a href="#">4sub4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="ex03">
+        <ul>
+            <li><a href="#">menu1</a>
+                <ul>
+                    <li><a href="#">1sub1</a></li>
+                    <li><a href="#">1sub2</a></li>
+                    <li><a href="#">1sub3</a></li>
+                    <li><a href="#">1sub4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu2</a>
+            <ul>
+                    <li><a href="#">2sub1</a></li>
+                    <li><a href="#">2sub2</a></li>
+                    <li><a href="#">2sub3</a></li>
+                    <li><a href="#">2sub4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu3</a>
+            <ul>
+                    <li><a href="#">3sub1</a></li>
+                    <li><a href="#">3sub2</a></li>
+                    <li><a href="#">3sub3</a></li>
+                    <li><a href="#">3sub4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu4</a>
+            <ul>
+                    <li><a href="#">4sub1</a></li>
+                    <li><a href="#">4sub2</a></li>
+                    <li><a href="#">4sub3</a></li>
+                    <li><a href="#">4sub4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="ex04">
+        <ul>
+            <li><a href="#">menu1</a>
+                <ul>
+                    <li><a href="#">1sub1</a></li>
+                    <li><a href="#">1sub2</a></li>
+                    <li><a href="#">1sub3</a></li>
+                    <li><a href="#">1sub4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu2</a>
+            <ul>
+                    <li><a href="#">2sub1</a></li>
+                    <li><a href="#">2sub2</a></li>
+                    <li><a href="#">2sub3</a></li>
+                    <li><a href="#">2sub4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu3</a>
+            <ul>
+                    <li><a href="#">3sub1</a></li>
+                    <li><a href="#">3sub2</a></li>
+                    <li><a href="#">3sub3</a></li>
+                    <li><a href="#">3sub4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu4</a>
+            <ul>
+                    <li><a href="#">4sub1</a></li>
+                    <li><a href="#">4sub2</a></li>
+                    <li><a href="#">4sub3</a></li>
+                    <li><a href="#">4sub4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

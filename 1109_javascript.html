@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 함수</title>
+</head>
+<body>
+    <h1>함수란?</h1>
+    <p>함수를 사용하게 되면 일련의 실행문들을 메모리에 저장했다가
+        필요할때 해당 함수의 이름으로 다시 호출하여 사용할수 있음</p>
+
+    <h2>실행문은 자바스크립트에서 확인 가능</h2>
+
+    <script>
+        // 함수 작성법
+        // function 식별자=작명이름(){
+        //     호출할때 수행될 실행문 작성
+        // }
+
+        function good(){
+
+            alert('잘하셨습니다.')
+
+        }
+
+
+    </script>
+
+    <button onclick="good()">확인</button>
+
+    <div id="gallery">
+
+        <a href="#prev" class="left" onclick="prev()"> &lt; </a>
+
+        <img src="https://picsum.photos/id/237/500/500" alt="" id="img">
+
+        <a href="#next" class="right" onclick="next()"> &gt; </a>
+
+    </div>
+
+    <style>
+        #gallery {background-color: aliceblue;
+                  width: 700px;
+                  text-align: center;
+                  padding: 20px 0;
+                  margin: 0 auto;
+                  position: relative;}
+        .left {position: absolute;
+               width: 50px;
+               height: 50px;
+               text-decoration: none;
+               color: #000;
+               background-color: #ccc;
+               left: 25px;
+               top: 50%;
+               margin-top: -25px;
+               font-size: 30px;}
+        .right {position: absolute;
+               width: 50px;
+               height: 50px;
+               text-decoration: none;
+               color: #000;
+               background-color: #ccc;
+               right: 25px;
+               top: 50%;
+               margin-top: -25px;
+               font-size: 30px;}
+        #gallery a:hover {background-color: blue;
+                          color: #fff;}
+    </style>
+
+    <script>
+
+        var i=0;
+
+        function next(){
+            i++;
+            if(i>5)i=0
+            console.log(i)
+            document.getElementById('img').src="https://picsum.photos/id/"+(237+i)+"/500/500";
+            
+        }
+
+        function prev(){
+            i--;
+            if(i<0)i=5
+            console.log(i)
+            document.getElementById('img').src="https://picsum.photos/id/"+(237+i)+"/500/500";
+        }
+
+    </script>
+
+
+    <button onclick="check()">확인</button>
+    <button onclick="cancel()">취소</button>
+
+    <script>
+        function check(){
+            alert('확인되었습니다.')
+        }
+
+        function cancel(){
+            alert('취소되었습니다.')
+        }
+    </script>
+
+</body>
+</html>

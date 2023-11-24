@@ -1,0 +1,184 @@
+/* 언어 설정 */
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* reset */
+* {margin: 0;
+   padding: 0;}
+ul, ol {list-style: none;}
+a {text-decoration: none;
+   color: #000;}
+img {border: none;
+     vertical-align: bottom;}
+body {font-family: 'Orbitron', sans-serif;}
+
+/* 전체 프레임 설정 */
+#wrap {width: 100%;
+       height: 100%;
+       position: fixed;
+       left: 0;
+       top: 0;
+       background-image: url(img/bg_morning.jpg);
+       background-size: cover;}
+
+/* 로고설정 */
+#wrap h1 {width: 90px;
+          height: 80px;
+          background-image: url(img/logo_b.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          text-indent: -9999px;
+          position: fixed;
+          left: 60px;
+          top: 30px;}
+
+/* hero 설정 */
+article {position: absolute;
+         left: 150px;
+         top: 50%;
+         margin-top: -100px;}
+article p {font-size: 50px;
+           color: #666;
+           }
+article strong {color: #111;}
+article em {font-style: normal;
+            color: #333;
+            font-size: 14px;}
+
+/* 모바일구간 */
+figure {width: 1226px;
+        height: 809px;
+        background-image: url(img/phone_morning.png);
+        position: absolute;
+        right: -300px;
+        top: 200px;}
+figure p {position: absolute;
+          width: 546px;
+          height: 308px;
+          left: 135px;
+          top: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 60px;
+          color: #333;}
+
+/* 네비구간 */
+nav {position: fixed;
+     bottom: 30px;
+     width: 100%;}
+nav ul {display: flex;
+        justify-content: space-around;}
+nav li {width: 20%;}
+nav li a {display: block;
+          background-color: rgba(255, 255, 255, 0.5);
+          color: #111;
+          padding: 20px;
+          text-align: center;}
+
+
+/* 아침테마 */
+/* 전체 프레임 설정 */
+#wrap.morning {background-image: url(img/bg_morning.jpg);}
+
+/* 로고설정 */
+#wrap.morning h1 {background-image: url(img/logo_b.png);}
+
+.morning figure {background-image: url(img/phone_morning.png);}
+
+.morning article p {color: #666;}
+.morning article strong {color: #111;}
+.morning article em {color: #333;}
+
+
+/* 점심테마 */
+/* 전체 프레임 설정 */
+#wrap.afternoon {background-image: url(img/bg_afternoon.jpg);}
+
+/* 로고설정 */
+#wrap.afternoon h1 {background-image: url(img/logo_b.png);}
+
+.afternoon figure {background-image: url(img/phone_afternoon.png);}
+
+.afternoon article p {color: #666;}
+.afternoon article strong {color: #111;}
+.afternoon article em {color: #333;}
+
+
+/* 저녁테마 */
+/* 전체 프레임 설정 */
+#wrap.evening {background-image: url(img/bg_evening.jpg);}
+
+/* 로고설정 */
+#wrap.evening h1 {background-image: url(img/logo_w.png);}
+
+.evening figure {background-image: url(img/phone_evening.png);}
+
+.evening article p {color: #444;}
+.evening article strong {color: #fff;}
+.evening article em {color: #333;}
+
+/* 밤테마 */
+/* 전체 프레임 설정 */
+#wrap.night {background-image: url(img/bg_night.jpg);}
+
+/* 로고설정 */
+#wrap.night h1 {background-image: url(img/logo_w.png);}
+
+.night figure {background-image: url(img/phone_night.png);}
+
+.night figure p {color: #fff;}
+.night article p {color: #bbb;}
+.night article strong {color: #fff;}
+.night article em {color: #888;}
+
+
+/* 구름 설정 */
+.cl001 {position: absolute;
+        top: 0%;
+        left: -1146px;
+        animation: ani1 110s linear infinite;}
+.cl002 {position: absolute;
+        top: 20px;
+        left: 0;
+        animation: ani2 100s linear infinite;}
+
+
+
+@keyframes ani1 {
+        0% {left: -1146px;}
+        100% {left: 1950px;}
+}
+
+@keyframes ani2 {
+        0% {left: 0;}
+        50% {left: 1950px;}
+        50.0001% {left: -1841px;}
+        100% {left: 0;}
+}
+
+
+/* 모바일 구름설정 */
+figure p {position: relative;
+         overflow: hidden;}
+.ml001 {width: 346px;
+        position: absolute;
+        top: 0;
+        left: -546px;
+        animation: m-ani1 110s linear infinite;}
+.ml002 {width: 546px;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        animation: m-ani2 100s linear infinite;}
+
+@keyframes m-ani1 {
+        0% {left: -346px;}
+        100% {left: 400px;}
+}
+@keyframes m-ani2 {
+        0% {left: 0;}
+        50% {left: 600px;}
+        50.0001% {left: -546px;}
+        100% {left: 0;}
+}

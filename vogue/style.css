@@ -1,0 +1,163 @@
+/* 언어 설정 */
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* reset */
+* {margin: 0;
+   padding: 0;}
+a {text-decoration: none;
+   color: #bbb;}
+ul,ol {list-style: none;}
+img {border: none;
+     vertical-align: bottom;}
+body {font-family: 'Orbitron', sans-serif;
+      background-color: #111;
+      color: #bbb;
+      position: fixed;
+      width: 100%;
+      height: 100%;}
+
+/* 전체구조설정 */
+.wrap {position: fixed;
+       width: 100%;
+       height: 100%;
+       perspective: 900px;}
+
+/* 네비설정 */
+nav {width: 150px;
+     height: 100%;
+     position: fixed;
+     left: 0;
+     top: 0;
+     background-color: #888;
+     z-index: 2;
+     transform-origin: left top;
+     transform: rotateY(120deg);
+     transition: all 0.8s;
+     opacity: 0;}
+
+nav.on {transform: rotateY(0deg);
+        opacity: 1;}
+
+nav ul {position: absolute;
+        top: 40%;
+        left: 0;
+        width: 100%;}
+nav li {width: 100%;}
+nav a {display: block;
+       padding: 10px 0;
+       text-align: center;
+       font-size: 22px;}
+
+nav li.on a {background-color: #000;
+                color: #ccc;} 
+
+/* 섹션설정 */
+section {width: 100%;
+         height: 100%;
+         position: fixed;
+         background-color: paleturquoise;
+         z-index: 1;
+         transform-origin: right top;
+         transform: rotateY(0deg);
+         transition: all 0.5s;}
+
+section.on {transform: rotateY(-10deg);}
+
+
+.fa-bars {position: fixed;
+          z-index: 3;
+          left: 50px;
+          top: 50px;
+          font-size: 40px;
+          cursor: pointer;
+          color: #fff;
+          animation: ani 0.5s infinite alternate;}
+
+@keyframes ani {
+    0% {transform: scale(1.0);
+        opacity: 1;
+        color: #fff;}
+    100% {transform: scale(1.5);
+          opacity: 0.8;
+          color: #666;}
+}
+
+/* 세부박스설정 */
+section>div {position: absolute;
+             width: 100%;
+             height: 100%;
+             left: 0;
+             top: 0;
+             opacity: 0;
+             z-index: 1;
+             perspective: 500px;}
+section>div:nth-child(1) {background-color: palevioletred;}
+section>div:nth-child(2) {background-color: paleturquoise;}
+section>div:nth-child(3) {background-color: palegreen;}
+
+section>div.on {opacity: 1;
+                z-index: 3;}
+
+section>div>p {transition: all 1.5s;
+               transform: rotateY(180deg);
+               float: left;
+               width: 25%;
+               height: 25%;}
+
+/* 박스1 설정 */
+.box1>p {}
+.box1>p:nth-child(1) {background-color: #999;
+                      width: 50%;}
+.box1>p:nth-child(2) {background-color: #888;}
+.box1>p:nth-child(3) {background-color: #777;}
+.box1>p:nth-child(4) {background-color: #666;
+                      float: right;
+                      width: 50%;
+                      height: 50%;}
+.box1>p:nth-child(5) {background-color: #555;}
+.box1>p:nth-child(6) {background-color: #444;}
+.box1>p:nth-child(7) {background-color: #333;}
+.box1>p:nth-child(8) {background-color: #222;}
+.box1>p:nth-child(9) {background-color: #111;}
+.box1>p:nth-child(10) {background-color: #aaa;
+                       width: 50%;}
+.box1>p:nth-child(11) {background-color: #bbb;}
+
+/* 박스2 설정 */
+.box2>p {}
+.box2>p:nth-child(1) {background-color: #999;}
+.box2>p:nth-child(2) {background-color: #888;}
+.box2>p:nth-child(3) {background-color: #777;
+                      width: 50%;}
+.box2>p:nth-child(4) {background-color: #666;
+                      height: 50%;}
+.box2>p:nth-child(5) {background-color: #555;
+                      width: 50%;
+                      height: 50%;}
+.box2>p:nth-child(6) {background-color: #444;}
+.box2>p:nth-child(7) {background-color: #333;}
+.box2>p:nth-child(8) {background-color: #222;}
+.box2>p:nth-child(9) {background-color: #111;}
+.box2>p:nth-child(10) {background-color: #aaa;}
+.box2>p:nth-child(11) {background-color: #bbb;}
+
+/* 박스3 설정 */
+.box3>p {}
+.box3>p:nth-child(1) {background-color: #999;
+                        width: 50%;
+                        height: 100%;}
+.box3>p:nth-child(2) {background-color: #888;}
+.box3>p:nth-child(3) {background-color: #777;}
+.box3>p:nth-child(4) {background-color: #666;
+                      width: 50%;}
+.box3>p:nth-child(5) {background-color: #555;
+                      height: 50%;}
+.box3>p:nth-child(6) {background-color: #444;}
+.box3>p:nth-child(7) {background-color: #333;}
+
+
+
+section>div.on p{transform: rotateY(0deg);}
+
+
